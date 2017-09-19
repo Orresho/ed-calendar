@@ -1,3 +1,4 @@
+import { SliderComponent } from './start/slider.component';
 import { HeaderComponent } from './start/header.component';
 import { StartComponent } from './start/start.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,6 +11,7 @@ import { AppComponent } from './app.component';
     AppComponent,
     StartComponent,
     HeaderComponent,
+    SliderComponent
     
   ],
   imports: [
