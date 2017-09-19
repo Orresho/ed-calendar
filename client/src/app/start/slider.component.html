@@ -1,11 +1,11 @@
 <div class="carousel">
     <ul class="slides">
-        <li *ngFor="let image of images">
-            <h3>{{image.title}}</h3>
-            <p>{{image.description}}</p>
-            <p>{{image.location}}</p>
-            <p>{{image.date}}</p>
-            <img src="{{image.url}}" alt="else">
+        <li *ngFor="let slide of slides">
+            <h3>{{slide.title}}</h3>
+            <p>{{slide.description}}</p>
+            <p>{{slide.location}}</p>
+            <p>{{slide.date}}</p>
+            <img src="{{slide.url}}" alt="else">
         </li>
     </ul>
 </div>

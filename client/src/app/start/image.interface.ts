@@ -1,4 +1,4 @@
-export class Image {
+export class Slide {
     title: String;
     description: String;
     location: String;
