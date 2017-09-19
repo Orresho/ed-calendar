@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 //Import image interface
-import { Slide } from './image.interface';
+import { Image } from './image.interface';
 
 @Component({
     selector: 'app-slider',
@@ -10,11 +10,11 @@ import { Slide } from './image.interface';
 })
 export class SliderComponent {
     // images data to be bound to the template
-    public slides = SLIDES;
+    public images = IMAGES;
 }
 
 // Images array implementing image interface
-var SLIDES: Slide[] = [
+var IMAGES: Image[] = [
     {title: 'Flowers', description: 'these are some nice flowers', location: 'Sarajevo', date: '12 februari', url: 'https://www.almanac.com/sites/default/files/birth_month_flowers-primary-1920x1280px_pixabay.jpg' },
     {title: 'Cars', description: 'these are some nice cars', location: 'Sarajevo', date: '12 februari', url: 'https://avisassets.abgemea.com/.imaging/featureImageLarge/dms/DMS/local/ZA/fleet/fleet-page/luxury-cars-feature.jpg' },
     {title: 'towers', description: 'these are some nice towers', location: 'Sarajevo', date: '12 februari', url: 'http://weburbanist.com/wp-content/uploads/2016/08/diamond-tower.jpg' },
