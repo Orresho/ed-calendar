@@ -5,8 +5,8 @@ import { Image } from './image.interface';
 
 @Component({
     selector: 'app-slider',
-    templateUrl: './slider.component.html'
-    // styleUrls: ['./slider.component.css']
+    templateUrl: './slider.component.html',
+    styleUrls: ['slider.component.css']
 })
 export class SliderComponent {
     // images data to be bound to the template
