@@ -1,7 +1,7 @@
-export class Slide {
+export class Image {
     title: String;
     description: String;
     location: String;
     date: String;
-    url: String;
+    url: string;
 }
