@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
 })
 
 export class StartComponent {
+
+    value:number = 12;
+
+    changeValue():void {
+        this.value += 1;
+    }
 }
