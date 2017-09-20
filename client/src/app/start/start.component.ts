@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-start',
-    templateUrl: 'start.component.html'
+    templateUrl: 'start.component.html',
+    styleUrls: ['start.components.css']
 })
 
 export class StartComponent {
