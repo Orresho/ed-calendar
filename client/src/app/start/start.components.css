@@ -22,40 +22,74 @@
 
 .center{
     background-color: #f8f8f8;
-    height: 66.1vh;
+    height: 62vh;
     width: 100%;
 }
 .left {
     background-color:white;
-    height: 66.1vh;
+    height: 62vh;
     border: solid 1px #C9C7C7; 
+
+
 }
 .right{
     background-color:white;
     height: 66.1vh;
 }
 .blue-upper{
-    height: 25vh;
+    height: 30vh;
     background-color:white;
-    border: solid 1px #C9C7C7; 
+
     width: 100%;
 }
 .blue-lower{
-    height: 30vh;
+    height: 28vh;
     background-color:white;
     border: solid 1px #C9C7C7; 
     width: 100%;
+    font-size: 12px;
 }
 .upper{
-    height: 20px;
-    background-color: #f8f8f8;
+    height: 10px;
+    background-color:#f8f8f8;
     width: 100%;
 
+}
+.upper2{
+    width: 100%;
+    height: 46vh;
+    background-image: url('http://softhouseeducation.se/wp-content/uploads/2017/09/Copy-kurs2Fsem-15.png');
+    background-repeat: no-repeat no-repeat;
+    background-position-x: center;
+    margin-top: 2px;
+}
+.lower{
+    height: 30px;
+    background-color: #f8f8f8;
+    width: 100%;
+}
+.middle{
+    height: 15px;
+    background-color: #f8f8f8;
+    width: 100%;
+}
+.blue{
+background-color:#f8f8f8;
+width: 15%;
+height: 30vh;
 }
 .green{
-    height: 40px;
-    background-color: #f8f8f8;
-    width: 100%;
+    height: 35vh;
+    width: 70%;
+    background-color:white;
+    border: solid 1px #C9C7C7; 
+    background-image: url('http://softhouseeducation.se/wp-content/uploads/2017/01/mattias%C3%A5hlander.jpg');
+
+    background-size:cover;
+    background-repeat: no-repeat no-repeat;
 }
 
+.img{
+
+}
 
