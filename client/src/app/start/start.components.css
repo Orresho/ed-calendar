@@ -1,6 +1,6 @@
 .main {
     height: 100%;
-    font-size: 12px;
+    font-size: 115%;
 }
 .main_page{
 
@@ -12,7 +12,7 @@
 ************************************/
 .margin {
     background-color: #f8f8f8;
-    height: 8vh;
+    height: 8.9vh;
 }
 
 /* Den centrala delen av sidan där all info ska presenteras
@@ -30,10 +30,11 @@
 }
 
 .left-upper{
-    height: 46vh;
+    height: 42vh;
     background-image: url('http://softhouseeducation.se/wp-content/uploads/2017/09/Copy-kurs2Fsem-15.png');
     background-repeat: no-repeat no-repeat;
     background-position-x: center;
+    background-size:80%; 
 }
 .left-lower{
     background-color:white;
