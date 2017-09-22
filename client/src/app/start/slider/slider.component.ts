@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 //Import image interface
-import { Image } from './image.interface';
+import { Image } from '../image.interface';
 
 @Component({
     selector: 'app-slider',
