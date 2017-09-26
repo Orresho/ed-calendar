@@ -1,60 +1,62 @@
-.carousel{
-    /* overflow: hidden; */
-    width: 100%;
+/* Global styles */
+/* ---------- */
+span{
+    color: #f05a1a;
 }
 
-.slides{
+ul{
     list-style: none;
-    position: absolute;
-    width: 500%;
+}
+/* ---------- */
 
-    overflow: hidden;
-    -webkit-animation:carousel 20s infinite;
-    animation:carousel 20s infinite;
+
+/* The global slider scope */
+#slider{
+    margin-top: 1%;
+    margin-left: 3%;
+    /* border: 1px solid lightgray; */
 }
 
-.slides > li{
-    position: relative;
-    float: left;
-    width: 20%;
+
+/* Header of the event */
+.eventHeader{
+    color: #f05a1a
 }
 
-.carousel img{
-    display: block;
-    width: 50%;
-    max-width: 100%;
+/* Event image and description */
+.eventImage{
+    border: 1px solid lightgray;
+    background-color: white;
 }
 
-.carousel h2{
-    margin-bottom: 0;
-    font-size:1em;
-    padding:1.5em 0.5em 1.5em 0.5em;
-    position:absolute;
-    right:0px;
-    bottom:0px;
-    left:0px;
-    text-align:center;
-    color:#fff;
-    background-color:rgba(0,0,0,0.75);
-    text-transform: uppercase;
+.information{
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid lightgray;
 }
 
-@keyframes carousel{
-    0%    { left:20%; }
-    11%   { left:20%; }
-    12.5% { left:-75%; }
-    23.5% { left:-75%; }
-    25%   { left:-175%; }
-    36%   { left:-175%; }
-    37.5% { left:-275%; }
-    48.5% { left:-275%; }
-    50%   { left:-375%; }
-    61%   { left:-375%; }
-    62.5% { left:-275%; }
-    73.5% { left:-275%; }
-    75%   { left:-175%; }
-    86%   { left:-175%; }
-    87.5% { left:-75%; }
-    98.5% { left:-75%; }
-    100%  { left: 20%; }
+.information-highlight{
+    text-align: center; /* Doesn't work, fix*/
+    color: #f05a1a
 }
+
+.speakerImage{
+    /* margin-top: 10px; */
+    border: 1px solid lightgray;
+    padding: 10px 50px 10px 15px;
+    /* background-color: white; */
+    
+}
+
+.contactInfo{
+    /* margin-left: 335px; */
+    /* margin-top: 10px; */
+    /* border: 1px solid #f05a1a; */
+    text-align: center;
+    margin-left: 280px;
+    border-radius: 30%;
+}
+
+
+
