@@ -1,28 +1,3 @@
-<!-- <div class="carousel">
-    <ul class="slides">
-        <li *ngFor="let image of images">
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="description">
-                        <h3>{{image.title}}</h3>
-                        <hr>
-                        <img src="{{image.url}}" alt="else">
-                        <p>{{image.description}}</p>
-                    </div>
-                </div>
-
-                <div class="information">
-                    <div class="col-md-1">
-                        <p>{{image.location}}</p>
-                        <p>{{image.date}}</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul> -->
-
-
 <div class="container-fluid" id="slider">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="row">
@@ -31,13 +6,14 @@
                 <div class="item active">
                    <h1> <span>HELLO AND WELCOME TO SOFTHOUSE EVENT SLIDE</span></h1>
                 </div>
+                <!-- Iterate through each slide -->
                 <div class="item" *ngFor="let image of images">
                     <h3 class="eventHeader">{{image.title}}</h3>
                     <div class="col-md-6 eventImage">
-                        <img src="http://softhouseeducation.se/wp-content/uploads/2017/09/Copy-kurs2Fsem-15.png" alt="Los Angeles" style="width:100%;">
+                        <img src="{{image.imageUrl}}" alt="Los Angeles" style="width:100%;">
                         <br>
                         <br>
-                        <b>Temat för kvällen är att kombinera 2 intressen, spela brädspel & continuous delivery. Vi är många på Softhouse som gillar just detta och vill gärna träffa fler som delar vårt intresse.</b>
+                        <b>{{image.subHeading}}</b>
                         <br>
                         <br>
                         <p>{{image.description}}</p>
@@ -46,30 +22,27 @@
                         <div class="information">
                             <label class="information-highlight">INFORMATION</label>
                             <br>
-                            <label><span class="highlight">Pris: </span>Gratis event</label>
+                            <label><span class="highlight">Pris: </span>{{image.price}}</label>
                             <br>
-                            <label><span class="highlight">Språk: </span>Svenska</label>
+                            <label><span class="highlight">Språk: </span>{{image.language}}</label>
                             <br>
-                            <label><span class="highlight">DATUM: </span>17:00-19:00 (Enklare mat och dryck från 17:00, Introduktion av spelet startar 17:15, sedan tar spelet ca 1,5 h)</label>
+                            <label><span class="highlight">DATUM: </span>{{image.date}}</label>
                             <br>
-                            <label><span class="highlight">Plats: </span>Kungsgatan 1B, 352 30 Växjö</label>
+                            <label><span class="highlight">Tid: </span>{{image.time}}</label>
+                            <br>
+                            <label><span class="highlight">Plats: </span>{{image.location}}</label>
                         </div>
                     </div>
                     <div class="col-md-2 speakerImage">
-                        <img src="http://softhouseeducation.se/wp-content/uploads/2017/01/mattiasåhlander.jpg" alt="Chicago" style="width:200px;">
-                        <span>MATTIAS ÅHLANDER</span>
+                        <img src="{{image.speakerImageUrl}}" alt="Chicago" style="width:200px;">
+                        <span>{{image.speakerFullName}}</span>
                     </div>
                     <div class="col-md-3 contactInfo">
                         <br>
                         <br>
-                        <p>
-                            Mattias är agil coach och utbildare hos Softhouse med erfarenhet av förändringsledning, verksamhetsutveckling och införande
-                            av agila arbetssätt. Rutinerad och engagerad ledare som har erfarenhet i många roller, tex chef,
-                            projektledare, scrum master, produktägare och utvecklare. Coachar och leder utvecklingsteam,
-                            scrum masters, produktägare och chefer i sin roll som agil coach.
-                        </p>
-                        <p><span>mattias.ahlander@softhouse.se</span></p>
-                        <p><span>070 3090149 </span></p>
+                        <p>{{image.speakerDescription}}</p>
+                        <p><span>{{image.speakerEmail}}</span></p>
+                        <p><span>{{image.speakerPhone}}</span></p>
                     </div>
                 </div>
             </div>
