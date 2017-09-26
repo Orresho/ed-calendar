@@ -1,0 +1,62 @@
+/* Global styles */
+/* ---------- */
+span{
+    color: #f05a1a;
+}
+
+/* ---------- */
+
+
+/* The global slider scope */
+#slider{
+    margin-top: 1%;
+    margin-left: 3%;
+    /* border: 1px solid lightgray; */
+}
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+
+/* Header of the event */
+.eventHeader{
+    color: #f05a1a
+}
+
+/* Event image and description */
+.eventImage{
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.information{
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.information-highlight{
+    text-align: center; /* Doesn't work, fix*/
+    color: #f05a1a
+}
+
+.speakerImage{
+    /* margin-top: 10px; */
+    border: 1px solid lightgray;
+    padding: 10px 50px 10px 15px;
+    /* background-color: white; */
+    
+}
+
+.contactInfo{
+    /* margin-left: 335px; */
+    /* margin-top: 10px; */
+    /* border: 1px solid #f05a1a; */
+    text-align: center;
+    margin-left: 280px;
+    border-radius: 30%;
+}
+
+
+

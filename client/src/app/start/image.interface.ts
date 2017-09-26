@@ -1,7 +1,16 @@
-export class Image {
+export interface Image {
     title: String;
+    imageUrl: String;
+    subHeading: String;
     description: String;
-    location: String;
+    price: String;
+    language: String;
     date: String;
-    url: string;
+    time: String;
+    speakerImageUrl: String;
+    speakerFullName: String;
+    speakerDescription: String;
+    speakerEmail: String;
+    speakerPhone: String
+    location: String;
 }
