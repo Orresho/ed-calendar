@@ -4,9 +4,6 @@ span{
     color: #f05a1a;
 }
 
-ul{
-    list-style: none;
-}
 /* ---------- */
 
 
@@ -16,6 +13,9 @@ ul{
     margin-left: 3%;
     /* border: 1px solid lightgray; */
 }
+/* ---------- */
+/* ---------- */
+/* ---------- */
 
 
 /* Header of the event */
