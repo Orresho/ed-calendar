@@ -7,42 +7,42 @@
                    <h1> <span>HELLO AND WELCOME TO SOFTHOUSE EVENT SLIDE</span></h1>
                 </div>
                 <!-- Iterate through each slide -->
-                <div class="item" *ngFor="let image of images">
-                    <h3 class="eventHeader">{{image.title}}</h3>
+                <div class="item" *ngFor="let slide of slides">
+                    <h3 class="eventHeader">{{slide.title}}</h3>
                     <div class="col-md-6 eventImage">
-                        <img src="{{image.imageUrl}}" alt="Los Angeles" style="width:100%;">
+                        <img src="{{slide.imageUrl}}" alt="Los Angeles" style="width:100%;">
                         <br>
                         <br>
-                        <b>{{image.subHeading}}</b>
+                        <b>{{slide.subHeading}}</b>
                         <br>
                         <br>
-                        <p>{{image.description}}</p>
+                        <p>{{slide.description}}</p>
                     </div>
                     <div class="col-md-3">
                         <div class="information">
                             <label class="information-highlight">INFORMATION</label>
                             <br>
-                            <label><span class="highlight">Pris: </span>{{image.price}}</label>
+                            <label><span class="highlight">Pris: </span>{{slide.price}}</label>
                             <br>
-                            <label><span class="highlight">Språk: </span>{{image.language}}</label>
+                            <label><span class="highlight">Språk: </span>{{slide.language}}</label>
                             <br>
-                            <label><span class="highlight">DATUM: </span>{{image.date}}</label>
+                            <label><span class="highlight">DATUM: </span>{{slide.date}}</label>
                             <br>
-                            <label><span class="highlight">Tid: </span>{{image.time}}</label>
+                            <label><span class="highlight">Tid: </span>{{slide.time}}</label>
                             <br>
-                            <label><span class="highlight">Plats: </span>{{image.location}}</label>
+                            <label><span class="highlight">Plats: </span>{{slide.location}}</label>
                         </div>
                     </div>
                     <div class="col-md-2 speakerImage">
-                        <img src="{{image.speakerImageUrl}}" alt="Chicago" style="width:200px;">
-                        <span>{{image.speakerFullName}}</span>
+                        <img src="{{slide.speakerImageUrl}}" alt="Chicago" style="width:200px;">
+                        <span>{{slide.speakerFullName}}</span>
                     </div>
                     <div class="col-md-3 contactInfo">
                         <br>
                         <br>
-                        <p>{{image.speakerDescription}}</p>
-                        <p><span>{{image.speakerEmail}}</span></p>
-                        <p><span>{{image.speakerPhone}}</span></p>
+                        <p>{{slide.speakerDescription}}</p>
+                        <p><span>{{slide.speakerEmail}}</span></p>
+                        <p><span>{{slide.speakerPhone}}</span></p>
                     </div>
                 </div>
             </div>
