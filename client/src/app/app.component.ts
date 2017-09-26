@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public myInterval: number =2500; /* Ändrar tiden på slidern */
 }
+
+
