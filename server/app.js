@@ -7,11 +7,14 @@ var bodyParser = require('body-parser');
 const mongoose = require('./config/mongoose');
 
 var index = require('./routes/index');
-var events = require('./routes/users');
+var events = require('./routes/events');
 
+// Name of the mongo database
 var dbName = 'ed-calendar';
 
 var app = express();
+
+// Pass the mongo name to the mongo config function.
 mongoose(dbName);
 
 // view engine setup
@@ -26,8 +29,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
 app.use('/events', events);
+app.use('/', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,9 +40,13 @@ app.use(function(req, res, next) {
 });
 
 
-//
-// Errors should probably be handled fully by angular later on
-//
+// FOR LATER
+//********************************* */
+// Errors should probably be handled fully by angular later on.
+// Instead of making the server take care of the errors we render the angular view
+// to do it instead
+//********************************* */
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
