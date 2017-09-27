@@ -1,14 +1,20 @@
+import { SlideService } from './slide.service';
 import { Component } from '@angular/core';
 
 //Import image interface
 import { Slide } from '../slide.interface';
 
 @Component({
-    selector: 'app-slider',
-    templateUrl: './slider.component.html',
-    styleUrls: ['slider.component.css']
+    selector: 'app-slide',
+    templateUrl: './slide.component.html',
+    styleUrls: ['slide.component.css'],
+    providers: [SlideService]
 })
 export class SliderComponent {
+    constructor(private slideService: SlideService){}
+
+    
+
     // images data to be bound to the template
     public slides = SLIDES;
 }
