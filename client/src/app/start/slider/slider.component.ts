@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 //Import image interface
-import { Slider } from '../slider.interface';
+import { Slide } from '../slide.interface';
 
 @Component({
     selector: 'app-slider',
@@ -14,7 +14,7 @@ export class SliderComponent {
 }
 
 // Images array implementing image interface
-var SLIDES: Slider[] = [
+var SLIDES: Slide[] = [
     {
         title: 'Leadership'
         , imageUrl: 'http://softhouseeducation.se/wp-content/uploads/2015/08/seminarium-eventbilder-9.png'
