@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 const mongoose = require('./config/mongoose');
 
 var index = require('./routes/index');
-var events = require('./routes/users');
+var events = require('./routes/events');
 
 var dbName = 'ed-calendar';
 
