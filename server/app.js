@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 const mongoose = require('./config/mongoose');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var events = require('./routes/users');
 
 var dbName = 'ed-calendar';
 
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/events', events);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -36,6 +36,10 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+
+//
+// Errors should probably be handled fully by angular later on
+//
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
