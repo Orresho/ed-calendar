@@ -1,62 +1,152 @@
-/* Global styles */
-/* ---------- */
+/*****************************************************/
+/* Global styles 
+******************************************************/
 span{
     color: #f05a1a;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial;
 }
-
-/* ---------- */
-
-
-/* The global slider scope */
-#slider{
-    margin-top: 1%;
-    margin-left: 3%;
-    /* border: 1px solid lightgray; */
-}
-/* ---------- */
-/* ---------- */
-/* ---------- */
-
-
-/* Header of the event */
-.eventHeader{
-    color: #f05a1a
-}
-
-/* Event image and description */
-.eventImage{
-    border: 1px solid lightgray;
-    background-color: white;
-}
-
-.information{
-    text-align: left;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid lightgray;
-}
-
-.information-highlight{
-    text-align: center; /* Doesn't work, fix*/
-    color: #f05a1a
-}
-
-.speakerImage{
-    /* margin-top: 10px; */
-    border: 1px solid lightgray;
-    padding: 10px 50px 10px 15px;
-    /* background-color: white; */
+body{
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     
 }
 
-.contactInfo{
-    /* margin-left: 335px; */
-    /* margin-top: 10px; */
-    /* border: 1px solid #f05a1a; */
-    text-align: center;
-    margin-left: 280px;
-    border-radius: 30%;
+/*****************************************************/
+
+
+
+/*****************************************************/
+/* The global slider scope 
+******************************************************/
+#slider{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.margin-left{
+    padding-left: 3%;
+}
+.margin-right{
+    padding-right: 2%;
+}
+
+/*****************************************************/
+/* Header of the event 
+/*****************************************************/
+.eventHeader{
+    color: #f05a1a;
+    padding: 3px;
+    padding-left: 3%;
 }
 
 
+
+
+/*****************************************************/
+/* Handling the events
+/*****************************************************/
+
+.eventImage{ /* The column with the picture and eventdescription */
+    border: 1px solid lightgray;
+    background-color: white;
+    background-position: center;
+    color: #666666;
+    
+}
+
+.img-event{ /* Eventpicture - the picture class*/
+    padding: 2%;
+
+}
+
+.event-description{ /* Description about the event */
+    padding: 2%;
+    font-size: 18px;
+}
+
+
+.welcome-header{
+    font-size: 60px;
+    margin-left: 3%;
+}
+
+
+
+
+/*****************************************************/
+/* Information about the event 
+/*****************************************************/
+
+/* Handle the square with information about the event */
+.information{ 
+    text-align: left;
+    background-color: white;
+    /*height: 40vh; */
+    padding: 3%;
+    font-size: 18px;
+}
+.information-highlight{
+    color: #f05a1a
+}
+
+
+
+
+/*****************************************************/
+/* The speaker 
+/*****************************************************/
+
+
+.img{ /* picture of the speaker */
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+
+
+}
+.speaker-information{ /* Description about the speaker */
+    margin-top: 3%;
+    padding: 3%;
+    font-size: 18px;
+    text-align: center;
+    color: #666666;
+    
+}
+.speaker{ /* The speakers name */
+    font-size: 27px;
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+
+
+/*****************************************************/
+/* Handles the thumbnails in the carousel 
+/*****************************************************/
+.carousel-indicators{
+    position: fixed;
+    padding: 2%;
+    margin-bottom: 2%;
+
+}
+.carousel-indicators li {
+      margin: 0 4px;
+      width: 20px;
+      height: 20px;
+      line-height: 30px;
+      color: #fff;
+      background-color: white;
+      transition: all 0.5s ease;   /* try to make this the same time as the slide */
+      box-shadow: -2px -2px 1px #888888;      
+}
+.carousel-indicators .active{
+    margin: 0 4px;
+    width: 20px;
+    height: 20px;
+    background-color:lightgrey
+}
+
+/*****************************************************/
 

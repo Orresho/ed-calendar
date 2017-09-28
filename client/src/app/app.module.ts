@@ -6,13 +6,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
+import { EventSummaryComponent } from './start/slides/event-summary/event-summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartComponent,
     HeaderComponent,
-    SlideComponent
+    SlideComponent,
+    EventSummaryComponent
     
   ],
   imports: [
