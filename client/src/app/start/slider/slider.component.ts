@@ -16,6 +16,54 @@ export class SliderComponent {
 // Images array implementing image interface
 var SLIDES: Slider[] = [
     {
+        title: 'test3'
+        , imageUrl: 'http://softhouseeducation.se/wp-content/uploads/2015/08/seminarium-eventbilder-9.png'
+        , subHeading: 'Did I just lose my job? – the line managers role in an agile organization'
+        , description: `What does a line manager do in an agile organization? How can you help an organization that consists of cross-functional teams that are supposed to be able to handle everything themselves? What is left to do when teams prioritize, plan and execute everything themselves? There is no best practice for what a line manager should do. During this presentation we will talk about how leaders can best help their organization thrive, and what the impact is when they become too entangled in day-to-day operations and start micro-managing.`
+        , price: 'Gratis event'
+        , language: 'Engelska'
+        , date: '10 okt 2017'
+        , time: '08:30 – 10:00'
+        , location: 'Dockplatsen 12, Malmö'
+        , speakerImageUrl: 'http://education.hemsida.eu/wp-content/uploads/2015/11/Marcus-Degerman.jpg'
+        , speakerFullName: 'MARCUS DEGERMAN'
+        , speakerDescription: 'Marcus Degerman is a senior consultant at Softhouse Consulting where he helps organizations make it simpler to improve their collaboration and capabilities. He is the author of Solve Problems Together and an appreciated speaker, trainer, and consultant.'
+        , speakerEmail: 'marcus.degerman@softhouse.se'
+        , speakerPhone: '+46(0)701 112 055'
+    },
+    {
+        title: 'test2'
+        , imageUrl: 'http://softhouseeducation.se/wp-content/uploads/2015/08/seminarium-eventbilder-9.png'
+        , subHeading: 'Did I just lose my job? – the line managers role in an agile organization'
+        , description: `What does a line manager do in an agile organization? How can you help an organization that consists of cross-functional teams that are supposed to be able to handle everything themselves? What is left to do when teams prioritize, plan and execute everything themselves? There is no best practice for what a line manager should do. During this presentation we will talk about how leaders can best help their organization thrive, and what the impact is when they become too entangled in day-to-day operations and start micro-managing.`
+        , price: 'Gratis event'
+        , language: 'Engelska'
+        , date: '10 okt 2017'
+        , time: '08:30 – 10:00'
+        , location: 'Dockplatsen 12, Malmö'
+        , speakerImageUrl: 'http://education.hemsida.eu/wp-content/uploads/2015/11/Marcus-Degerman.jpg'
+        , speakerFullName: 'MARCUS DEGERMAN'
+        , speakerDescription: 'Marcus Degerman is a senior consultant at Softhouse Consulting where he helps organizations make it simpler to improve their collaboration and capabilities. He is the author of Solve Problems Together and an appreciated speaker, trainer, and consultant.'
+        , speakerEmail: 'marcus.degerman@softhouse.se'
+        , speakerPhone: '+46(0)701 112 055'
+    },
+    {
+        title: 'test1'
+        , imageUrl: 'http://softhouseeducation.se/wp-content/uploads/2015/08/seminarium-eventbilder-9.png'
+        , subHeading: 'Did I just lose my job? – the line managers role in an agile organization'
+        , description: `What does a line manager do in an agile organization? How can you help an organization that consists of cross-functional teams that are supposed to be able to handle everything themselves? What is left to do when teams prioritize, plan and execute everything themselves? There is no best practice for what a line manager should do. During this presentation we will talk about how leaders can best help their organization thrive, and what the impact is when they become too entangled in day-to-day operations and start micro-managing.`
+        , price: 'Gratis event'
+        , language: 'Engelska'
+        , date: '10 okt 2017'
+        , time: '08:30 – 10:00'
+        , location: 'Dockplatsen 12, Malmö'
+        , speakerImageUrl: 'http://education.hemsida.eu/wp-content/uploads/2015/11/Marcus-Degerman.jpg'
+        , speakerFullName: 'MARCUS DEGERMAN'
+        , speakerDescription: 'Marcus Degerman is a senior consultant at Softhouse Consulting where he helps organizations make it simpler to improve their collaboration and capabilities. He is the author of Solve Problems Together and an appreciated speaker, trainer, and consultant.'
+        , speakerEmail: 'marcus.degerman@softhouse.se'
+        , speakerPhone: '+46(0)701 112 055'
+    },
+    {
         title: 'Leadership'
         , imageUrl: 'http://softhouseeducation.se/wp-content/uploads/2015/08/seminarium-eventbilder-9.png'
         , subHeading: 'Did I just lose my job? – the line managers role in an agile organization'
