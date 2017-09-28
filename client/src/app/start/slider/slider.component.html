@@ -6,7 +6,9 @@
                     <!-- Indicators -->
                 <div class="item active">
                     <div class="col-md-12 welcome-header">
-                             <span>HELLO AND WELCOME TO SOFTHOUSE EVENT SLIDE</span> <!-- First slide with a header -->
+                        <app-event-summary>     <!-- First slide with a header -->
+                            
+                        </app-event-summary>  <!-- First slide with a header -->
                     </div>
                 </div>
                 <div class="item" *ngFor="let slide of slides"><!-- Iterate through each slide -->
@@ -16,25 +18,13 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <div class="col-md-7"> <!-- Left column with the event -->
+                            <div class="col-md-8 margin-left"> <!-- Left column with the event -->
                                 <div class="col-md-12 eventImage">
                                     <div class="col-md-12">
-                                        <img src="{{slide.imageUrl}}" alt="Los Angeles" class="img-event" style="width:100%;"> <!-- img for the event -->
-                                    </div>
-                                    <div class="col-md-12" class="event-description">
-                                        <br>
-                                        <b>{{slide.subHeading}}</b> <!-- header for the event description -->
-                                        <br>
-                                        <br>
-                                        <p>{{slide.description}}</p><!-- Description for the event -->
-                                    </div>
-                                </div>
-                            </div> <!-- end left column -->
-
-                            <div class="col-md-5"> <!-- The right column with information and the speaker -->
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-6 information"> <!-- Information about the event is presented -->
+                                        <div class="col-md-8">
+                                                <img src="{{slide.imageUrl}}" alt="Los Angeles" class="img-event" style="width:100%;"> <!-- img for the event -->
+                                        </div>
+                                        <div class="col-md-4 information"> <!-- Information about the event is presented -->
                                             <label class="information-highlight">INFORMATION</label>
                                             <br>
                                             <span class="highlight">Pris: </span>{{slide.price}} <!-- Price -->
@@ -48,13 +38,35 @@
                                             <span class="highlight">Plats: </span>{{slide.location}} <!-- Place / Adress -->
                                             <br>
                                         </div>
-                                        <div class="col-md-6">
-                                                <img class="img" src="{{slide.speakerImageUrl}}" alt="The speaker">
-                                                <div class="col-md-12 speaker">
-                                                    <span>{{slide.speakerFullName}}</span> <!-- Name of the speaker -->
-                                                </div>
-                                        </div>
                                     </div>
+                                        <div class="col-md-12" class="event-description">
+                                            <br>
+                                            <b>{{slide.subHeading}}</b> <!-- header for the event description -->
+                                            <br>
+                                            <br>
+                                            <p>{{slide.description}}</p><!-- Description for the event -->
+                                        </div>
+                                    
+                                </div>
+                            </div> <!-- end left column -->
+
+                            <div class="col-md-4 margin-right"> <!-- The right column with information and the speaker -->
+                                <div class="col-md-12">
+                                    
+                                        
+                                        <div class="col-md-12">
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-6 img-position">
+                                                    <img class="img" src="{{slide.speakerImageUrl}}" alt="The speaker">
+                                                </div>
+                                                <div class="col-md-3"></div>
+                                        </div>
+                                            
+                                            <div class="col-md-12 speaker">
+                                                <span>{{slide.speakerFullName}}</span> <!-- Name of the speaker -->
+                                            </div>                                        
+                                        
+
                                 </div>                
                                 <div class="col-md-12 speaker-information">  <!-- Description about the speaker -->
                                     <p>{{slide.speakerDescription}}</p><br>

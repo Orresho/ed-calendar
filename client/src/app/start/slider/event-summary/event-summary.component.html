@@ -1,0 +1,17 @@
+
+
+<div class="container-fluid" id="slider">
+  <div class="row">
+    <div class="col-md-12">
+
+          
+              <li *ngFor="let slide of slides; let i = index" data-target="#myCarousel" data-slide-to="i+1">
+                <div class="col-md-12">
+                    <img src="{{slide.imageUrl}}" alt="Los Angeles" class="img-event" style="width:100%;"> <!-- img for the event -->
+                </div>
+              </li>
+         
+
+    </div>
+  </div>
+</div>

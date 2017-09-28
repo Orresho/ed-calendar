@@ -5,13 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { EventSummaryComponent } from './start/slider/event-summary/event-summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartComponent,
     HeaderComponent,
-    SliderComponent
+    SliderComponent,
+    EventSummaryComponent
     
   ],
   imports: [

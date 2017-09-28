@@ -3,10 +3,7 @@
 ******************************************************/
 span{
     color: #f05a1a;
-
-}
-h1, span, a, label, h2, h3, h4, h5{
-
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial;
 }
 body{
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -20,10 +17,16 @@ body{
 /* The global slider scope 
 ******************************************************/
 #slider{
-    margin-top: 1%;
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 
-
+.margin-left{
+    padding-left: 2%;
+}
+.margin-right{
+    padding-right: 2%;
+}
 
 /*****************************************************/
 /* Header of the event 
@@ -31,6 +34,7 @@ body{
 .eventHeader{
     color: #f05a1a;
     padding: 3px;
+    padding-left: 2%;
 }
 
 
@@ -48,6 +52,7 @@ body{
 
 .img-event{ /* Eventpicture - the picture class*/
     padding: 2%;
+
 }
 
 .event-description{ /* Description about the event */
@@ -62,6 +67,7 @@ body{
 
 
 
+
 /*****************************************************/
 /* Information about the event 
 /*****************************************************/
@@ -70,7 +76,6 @@ body{
 .information{ 
     text-align: left;
     background-color: white;
-    border: 1px solid lightgray;
     /*height: 40vh; */
     padding: 3%;
     font-size: 18px;
@@ -86,17 +91,19 @@ body{
 /* The speaker 
 /*****************************************************/
 
+
 .img{ /* picture of the speaker */
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
+
+
 }
 .speaker-information{ /* Description about the speaker */
-    background-color: white;
-    border: 1px solid lightgray;
     margin-top: 3%;
     padding: 3%;
     font-size: 18px;
+    text-align: center;
 }
 .speaker{ /* The speakers name */
     font-size: 27px;
@@ -115,6 +122,7 @@ body{
 .carousel-indicators{
     position: fixed;
     padding: 2%;
+    margin-bottom: 2%;
 
 }
 .carousel-indicators li {
