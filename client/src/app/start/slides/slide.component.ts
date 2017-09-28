@@ -1,8 +1,8 @@
 import { SlideService } from './slide.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 //Import image interface
-import { Slide } from '../slide.interface';
+import { Slide } from './slide.interface';
 
 @Component({
     selector: 'app-slide',
@@ -10,13 +10,17 @@ import { Slide } from '../slide.interface';
     styleUrls: ['slide.component.css'],
     providers: [SlideService]
 })
-export class SliderComponent {
+export class SliderComponent implements OnInit {
+    slides: Slide[];
+    
     constructor(private slideService: SlideService){}
 
+    ngOnInit(){
+        this.slides = this.slideService.getSlides();
+    }
     
-
     // images data to be bound to the template
-    public slides = SLIDES;
+    public slides2 = SLIDES;
 }
 
 // Images array implementing image interface
