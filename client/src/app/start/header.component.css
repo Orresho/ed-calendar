@@ -52,7 +52,7 @@ body {
 .header{
     background-color:white;
     width: 100%;
-    height: 85px;
+    height: 90px;
     border-bottom: solid 1px #C9C7C7; 
 }
 span{
@@ -61,5 +61,9 @@ span{
 }
 button{
     margin-left: 10%;
+}
+.img{
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 /*******************************************************/

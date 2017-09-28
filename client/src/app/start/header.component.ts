@@ -15,7 +15,7 @@ export class HeaderComponent{
     sideWidth:any = 0;
 
     openNav(event) {
-        this.sideWidth = 250;
+        this.sideWidth = 350;
     } 
     closeNav() {
         this.sideWidth = 0;        
