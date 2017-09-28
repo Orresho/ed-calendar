@@ -9,9 +9,9 @@
                              <span>HELLO AND WELCOME TO SOFTHOUSE EVENT SLIDE</span> <!-- First slide with a header -->
                     </div>
                 </div>
-                <div class="item" *ngFor="let image of images"><!-- Iterate through each slide -->
+                <div class="item" *ngFor="let slide of slides"><!-- Iterate through each slide -->
                     <div class="col-md-11" >
-                        <h1 class="eventHeader">{{image.title}}</h1>  <!-- header for the seminare (svengelska) -->
+                        <h1 class="eventHeader">{{slide.title}}</h1>  <!-- header for the seminare (svengelska) -->
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -19,14 +19,14 @@
                             <div class="col-md-7"> <!-- Left column with the event -->
                                 <div class="col-md-12 eventImage">
                                     <div class="col-md-12">
-                                        <img src="{{image.imageUrl}}" alt="Los Angeles" class="img-event" style="width:100%;"> <!-- img for the event -->
+                                        <img src="{{slide.imageUrl}}" alt="Los Angeles" class="img-event" style="width:100%;"> <!-- img for the event -->
                                     </div>
                                     <div class="col-md-12" class="event-description">
                                         <br>
-                                        <b>{{image.subHeading}}</b> <!-- header for the event description -->
+                                        <b>{{slide.subHeading}}</b> <!-- header for the event description -->
                                         <br>
                                         <br>
-                                        <p>{{image.description}}</p><!-- Description for the event -->
+                                        <p>{{slide.description}}</p><!-- Description for the event -->
                                     </div>
                                 </div>
                             </div> <!-- end left column -->
@@ -37,30 +37,30 @@
                                         <div class="col-md-6 information"> <!-- Information about the event is presented -->
                                             <label class="information-highlight">INFORMATION</label>
                                             <br>
-                                            <span class="highlight">Pris: </span>{{image.price}} <!-- Price -->
+                                            <span class="highlight">Pris: </span>{{slide.price}} <!-- Price -->
                                             <br>
-                                            <span class="highlight">Språk: </span>{{image.language}} <!-- Language -->
+                                            <span class="highlight">Språk: </span>{{slide.language}} <!-- Language -->
                                             <br>
-                                            <span class="highlight">DATUM: </span>{{image.date}} <!-- Date -->
+                                            <span class="highlight">DATUM: </span>{{slide.date}} <!-- Date -->
                                             <br>
-                                            <span class="highlight">Tid: </span>{{image.time}} <!-- Time -->
+                                            <span class="highlight">Tid: </span>{{slide.time}} <!-- Time -->
                                             <br>
-                                            <span class="highlight">Plats: </span>{{image.location}} <!-- Place / Adress -->
+                                            <span class="highlight">Plats: </span>{{slide.location}} <!-- Place / Adress -->
                                             <br>
                                         </div>
                                         <div class="col-md-6">
-                                                <img class="img" src="{{image.speakerImageUrl}}" alt="The speaker">
+                                                <img class="img" src="{{slide.speakerImageUrl}}" alt="The speaker">
                                                 <div class="col-md-12 speaker">
-                                                    <span>{{image.speakerFullName}}</span> <!-- Name of the speaker -->
+                                                    <span>{{slide.speakerFullName}}</span> <!-- Name of the speaker -->
                                                 </div>
                                         </div>
                                     </div>
                                 </div>                
                                 <div class="col-md-12 speaker-information">  <!-- Description about the speaker -->
-                                    <p>{{image.speakerDescription}}</p><br>
+                                    <p>{{slide.speakerDescription}}</p><br>
                                     <p>Kontaktuppgifer:</p>
-                                    <p><span>{{image.speakerEmail}}</span></p>
-                                    <p><span>{{image.speakerPhone}}</span></p>
+                                    <p><span>{{slide.speakerEmail}}</span></p>
+                                    <p><span>{{slide.speakerPhone}}</span></p>
                                 </div>                        
                             </div>  <!-- end right column -->           
                         </div>
@@ -69,7 +69,7 @@
 
                 <ol class="carousel-indicators">                        
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li *ngFor="let image of images; let i = index" data-target="#myCarousel" data-slide-to="i+1"></li>
+                    <li *ngFor="let slide of slides; let i = index" data-target="#myCarousel" data-slide-to="i+1"></li>
                 </ol>
             </div> <!-- end of the carousel -->
         </div>
