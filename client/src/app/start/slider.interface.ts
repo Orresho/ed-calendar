@@ -1,4 +1,4 @@
-export interface Image {
+export interface Slider {
     title: String;
     imageUrl: String;
     subHeading: String;

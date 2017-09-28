@@ -9,7 +9,6 @@
                              <span>HELLO AND WELCOME TO SOFTHOUSE EVENT SLIDE</span> <!-- First slide with a header -->
                     </div>
                 </div>
-                
                 <div class="item" *ngFor="let image of images"><!-- Iterate through each slide -->
                     <div class="col-md-11" >
                         <h1 class="eventHeader">{{image.title}}</h1>  <!-- header for the seminare (svengelska) -->
@@ -31,7 +30,6 @@
                                     </div>
                                 </div>
                             </div> <!-- end left column -->
-
 
                             <div class="col-md-5"> <!-- The right column with information and the speaker -->
                                 <div class="col-md-12">
@@ -74,7 +72,6 @@
                     <li *ngFor="let image of images; let i = index" data-target="#myCarousel" data-slide-to="i+1"></li>
                 </ol>
             </div> <!-- end of the carousel -->
-
         </div>
     </div>
 </div>
