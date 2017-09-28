@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const mongoose = require('./config/mongoose');
+const cors = require('cors');
 
 var index = require('./routes/index');
 var events = require('./routes/events');
@@ -29,7 +30,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/events', events);
+// For allowing origins
+app.use(cors());
+
+// Use event middleware at localhost:3000/event
+app.use('/event', events);
 app.use('/', index);
 
 // catch 404 and forward to error handler

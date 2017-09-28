@@ -14,6 +14,7 @@ router.get('/', function(req, res){
                     error: err
                 });
             }
+            console.log(events);
             res.status(200).json({
                 message: 'Success',
                 obj: events

@@ -1,5 +1,6 @@
+import { SlideService } from './../slide.service';
 import { Component, OnInit } from '@angular/core';
-import { SliderComponent } from '../slider.component';
+import { SlideComponent } from '../slide.component';
 
 @Component({
   selector: 'app-event-summary',
@@ -7,6 +8,6 @@ import { SliderComponent } from '../slider.component';
   styleUrls: ['./event-summary.component.css']
 })
 export class EventSummaryComponent{
-    temp:  SliderComponent = new SliderComponent();
+    // temp:  SlideComponent = new SlideComponent();
 
 }
