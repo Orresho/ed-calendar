@@ -1,4 +1,4 @@
-import { SliderComponent } from './start/slides/slide.component';
+import { SlideComponent } from './start/slides/slide.component';
 import { HeaderComponent } from './start/header.component';
 import { StartComponent } from './start/start.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +12,7 @@ import { HttpModule } from '@angular/http';
     AppComponent,
     StartComponent,
     HeaderComponent,
-    SliderComponent
+    SlideComponent
     
   ],
   imports: [

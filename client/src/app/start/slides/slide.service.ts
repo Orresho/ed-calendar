@@ -16,28 +16,9 @@ export class SlideService{
     getSlides(){
         return this.http.get('http://localhost:3000/event')
             .map((response: Response) => {
-                const slides = response.json().obj;
-                let transformedSlides: Slide[] = [];
-                for (let slide of slides) {
-                    transformedSlides.push(new Slide(
-                        slide.title,
-                        slide.imageUrl,
-                        slide.subHeading,
-                        slide.description,
-                        slide.price,
-                        slide.language,
-                        slide.date,
-                        slide.time,
-                        slide.location,
-                        slide.speakerImageUrl,
-                        slide.speakerFullName,
-                        slide.speakerDescription,
-                        slide.speakerEmail,
-                        slide.speakerPhone)
-                    );
-                }
-                this.slides = transformedSlides;
-                return transformedSlides;
+                // console.log(response);
+                this.slides = response.json().obj;
+                return this.slides;
             })
             .catch((error:Response) => Observable.throw(error.json()));
     }
