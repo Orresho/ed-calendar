@@ -7,6 +7,7 @@ span{
 }
 body{
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
 }
 
 /*****************************************************/
@@ -22,7 +23,7 @@ body{
 }
 
 .margin-left{
-    padding-left: 2%;
+    padding-left: 3%;
 }
 .margin-right{
     padding-right: 2%;
@@ -34,7 +35,7 @@ body{
 .eventHeader{
     color: #f05a1a;
     padding: 3px;
-    padding-left: 2%;
+    padding-left: 3%;
 }
 
 
@@ -48,6 +49,8 @@ body{
     border: 1px solid lightgray;
     background-color: white;
     background-position: center;
+    color: #666666;
+    
 }
 
 .img-event{ /* Eventpicture - the picture class*/
@@ -63,6 +66,7 @@ body{
 
 .welcome-header{
     font-size: 60px;
+    margin-left: 3%;
 }
 
 
@@ -104,6 +108,8 @@ body{
     padding: 3%;
     font-size: 18px;
     text-align: center;
+    color: #666666;
+    
 }
 .speaker{ /* The speakers name */
     font-size: 27px;
@@ -143,7 +149,4 @@ body{
 }
 
 /*****************************************************/
-
-
-
 

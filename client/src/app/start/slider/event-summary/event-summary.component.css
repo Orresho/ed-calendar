@@ -1,0 +1,54 @@
+/****************************************/
+/* Global variables */
+/****************************************/
+body{
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 20px;
+}
+span{
+    color: #f05a1a;
+}
+
+li {
+    float: left;
+    padding: 1px;
+    color: #666666;
+    
+}
+
+li a {
+    display: block;
+    color: #666666;
+    
+    text-align: center;
+    text-decoration: none;
+    text-align: left;
+}
+
+.hej{
+    width: 400px;
+}
+.img-event{
+    margin-right: 30px;
+    color: #666666;
+    border-radius: 2%;
+    
+}
+.info-event{
+    padding: 8px;
+    width: 400px;
+}
+.header{
+    font-size: 60px;
+    margin-left: 2%;
+    color: #f05a1a;
+}
