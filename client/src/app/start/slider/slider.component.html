@@ -3,52 +3,127 @@
         <div class="row">
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
+                    <!-- Indicators -->
                 <div class="item active">
-                   <h1> <span>HELLO AND WELCOME TO SOFTHOUSE EVENT SLIDE</span></h1>
-                </div>
-                <!-- Iterate through each slide -->
-                <div class="item" *ngFor="let image of images">
-                    <h3 class="eventHeader">{{image.title}}</h3>
-                    <div class="col-md-6 eventImage">
-                        <img src="{{image.imageUrl}}" alt="Los Angeles" style="width:100%;">
-                        <br>
-                        <br>
-                        <b>{{image.subHeading}}</b>
-                        <br>
-                        <br>
-                        <p>{{image.description}}</p>
+                    <div class="col-md-12 welcome-header">
+                             <span>HELLO AND WELCOME TO SOFTHOUSE EVENT SLIDE</span> <!-- First slide with a header -->
                     </div>
-                    <div class="col-md-3">
-                        <div class="information">
-                            <label class="information-highlight">INFORMATION</label>
-                            <br>
-                            <label><span class="highlight">Pris: </span>{{image.price}}</label>
-                            <br>
-                            <label><span class="highlight">Språk: </span>{{image.language}}</label>
-                            <br>
-                            <label><span class="highlight">DATUM: </span>{{image.date}}</label>
-                            <br>
-                            <label><span class="highlight">Tid: </span>{{image.time}}</label>
-                            <br>
-                            <label><span class="highlight">Plats: </span>{{image.location}}</label>
+                </div>
+                
+                <div class="item" *ngFor="let image of images"><!-- Iterate through each slide -->
+                    <div class="col-md-11" >
+                        <h1 class="eventHeader">{{image.title}}</h1>  <!-- header for the seminare (svengelska) -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="col-md-7"> <!-- Left column with the event -->
+                                <div class="col-md-12 eventImage">
+                                    <div class="col-md-12">
+                                        <img src="{{image.imageUrl}}" alt="Los Angeles" class="img-event" style="width:100%;"> <!-- img for the event -->
+                                    </div>
+                                    <div class="col-md-12" class="event-description">
+                                        <br>
+                                        <b>{{image.subHeading}}</b> <!-- header for the event description -->
+                                        <br>
+                                        <br>
+                                        <p>{{image.description}}</p><!-- Description for the event -->
+                                    </div>
+                                </div>
+                            </div> <!-- end left column -->
+
+
+                            <div class="col-md-5"> <!-- The right column with information and the speaker -->
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6 information"> <!-- Information about the event is presented -->
+                                            <label class="information-highlight">INFORMATION</label>
+                                            <br>
+                                            <span class="highlight">Pris: </span>{{image.price}} <!-- Price -->
+                                            <br>
+                                            <span class="highlight">Språk: </span>{{image.language}} <!-- Language -->
+                                            <br>
+                                            <span class="highlight">DATUM: </span>{{image.date}} <!-- Date -->
+                                            <br>
+                                            <span class="highlight">Tid: </span>{{image.time}} <!-- Time -->
+                                            <br>
+                                            <span class="highlight">Plats: </span>{{image.location}} <!-- Place / Adress -->
+                                            <br>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <img class="img" src="{{image.speakerImageUrl}}" alt="The speaker">
+                                                <div class="col-md-12 speaker">
+                                                    <span>{{image.speakerFullName}}</span> <!-- Name of the speaker -->
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>                
+                                <div class="col-md-12 speaker-information">  <!-- Description about the speaker -->
+                                    <p>{{image.speakerDescription}}</p><br>
+                                    <p>Kontaktuppgifer:</p>
+                                    <p><span>{{image.speakerEmail}}</span></p>
+                                    <p><span>{{image.speakerPhone}}</span></p>
+                                </div>                        
+                            </div>  <!-- end right column -->           
                         </div>
                     </div>
-                    <div class="col-md-2 speakerImage">
-                        <img src="{{image.speakerImageUrl}}" alt="Chicago" style="width:200px;">
-                        <span>{{image.speakerFullName}}</span>
-                    </div>
-                    <div class="col-md-3 contactInfo">
-                        <br>
-                        <br>
-                        <p>{{image.speakerDescription}}</p>
-                        <p><span>{{image.speakerEmail}}</span></p>
-                        <p><span>{{image.speakerPhone}}</span></p>
-                    </div>
-                </div>
-            </div>
+                </div> <!-- end of the slider -->
+
+                <ol class="carousel-indicators">                        
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li *ngFor="let image of images; let i = index" data-target="#myCarousel" data-slide-to="i+1"></li>
+                </ol>
+            </div> <!-- end of the carousel -->
+
         </div>
     </div>
 </div>
+
+<!------------------------ Orhans skräp :D --------------------------------------->
+
+                     <!--  <div class="col-md-6">
+                            <h3 class="eventHeader">{{image.title}}</h3>
+                            <div class="col-md-6 eventImage">
+                                <img src="{{image.imageUrl}}" alt="Los Angeles" style="width:100%;">
+                                <br>
+                                <br>
+                                <b>{{image.subHeading}}</b>
+                                <br>
+                                <br>
+                                <p>{{image.description}}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-3">
+                                <div class="information">
+                                    <label class="information-highlight">INFORMATION</label>
+                                    <br>
+                                    <label><span class="highlight">Pris: </span>{{image.price}}</label>
+                                    <br>
+                                    <label><span class="highlight">Språk: </span>{{image.language}}</label>
+                                    <br>
+                                    <label><span class="highlight">DATUM: </span>{{image.date}}</label>
+                                    <br>
+                                    <label><span class="highlight">Tid: </span>{{image.time}}</label>
+                                    <br>
+                                    <label><span class="highlight">Plats: </span>{{image.location}}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 speakerImage">
+                                <img src="{{image.speakerImageUrl}}" alt="Chicago" style="width:200px;">
+                                <span>{{image.speakerFullName}}</span>
+                            </div>
+                            <div class="col-md-3 contactInfo">
+                                <br>
+                                <br>
+                                <p>{{image.speakerDescription}}</p>
+                                <p><span>{{image.speakerEmail}}</span></p>
+                                <p><span>{{image.speakerPhone}}</span></p>
+                            </div> 
+                        </div> -->
+
+
+
 
 <!-- 
 <div class="container-fluid" id="slider">
