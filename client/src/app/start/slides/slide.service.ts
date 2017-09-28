@@ -12,7 +12,6 @@ export class SlideService{
     // Main slides array
     private slides: Slide[] = [];
 
-
     getSlides(){
         return this.http.get('http://localhost:3000/event')
             .map((response: Response) => {

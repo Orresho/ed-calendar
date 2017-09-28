@@ -30,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// For allowing origins
 app.use(cors());
 
 // Use event middleware at localhost:3000/event
