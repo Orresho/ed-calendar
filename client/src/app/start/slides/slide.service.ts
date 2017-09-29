@@ -6,7 +6,6 @@ import { Observable } from "rxjs";
 
 @Injectable()
 export class SlideService{
-
     constructor(private http: Http){}
     
     // Main slides array
