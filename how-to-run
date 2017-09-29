@@ -1,0 +1,19 @@
+Mongo
+#####################
+- Connect to ./mongod.exe
+
+
+Server
+#####################
+- install nodemon by: "npm install -g nodemon"
+- then start server by writing in /server/: "nodemon npm start"
+
+
+Client
+######################
+- start client with: "ng serve"
+
+
+Localhost
+######################
+program run at: localhost:4200
