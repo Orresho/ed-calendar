@@ -9,36 +9,34 @@ body{
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin-left: 1.5%;
     padding: 0;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 15px;
 }
 span{
     color: #f05a1a;
+    font-weight: 600;
+    font-family: "Georgia", "Times New Roman", Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 li {
     float: left;
     padding: 1px;
     color: #666666;
-    
+    min-height: 325px;
 }
 
 li a {
     display: block;
-    color: #666666;
-    
     text-align: center;
     text-decoration: none;
     text-align: left;
 }
 
-.hej{
-    width: 400px;
-}
 .img-event{
-    margin-right: 30px;
+    
     color: #666666;
     border-radius: 2%;
     
@@ -46,9 +44,13 @@ li a {
 .info-event{
     padding: 8px;
     width: 400px;
+    vertical-align: top;
+    padding-bottom: 30px;
+    display: table-cell;
 }
 .header{
-    font-size: 60px;
-    margin-left: 2%;
+    font-size: 40px;
+    margin-left: 3.5%;
     color: #f05a1a;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial;
 }
