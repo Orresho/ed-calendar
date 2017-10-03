@@ -32,7 +32,7 @@
                                         </div>
                                         <div class="col-md-4 information">
                                             <!-- Information about the event is presented -->
-                                            <label class="information-highlight">INFORMATION</label>
+                                            <span class="information-highlight">INFORMATION</span>
                                             <br>
                                             <span class="highlight">Pris: </span>{{slide.price}}
                                             <!-- Price -->
@@ -42,9 +42,6 @@
                                             <br>
                                             <span class="highlight">DATUM: </span>{{slide.date}}
                                             <!-- Date -->
-                                            <br>
-                                            <span class="highlight">Tid: </span>{{slide.time}}
-                                            <!-- Time -->
                                             <br>
                                             <span class="highlight">Plats: </span>{{slide.location}}
                                             <!-- Place / Adress -->
@@ -57,7 +54,8 @@
                                         <!-- header for the event description -->
                                         <br>
                                         <br>
-                                        <p>{{slide.description}}</p>
+                                        <!-- limits the lenght of the description -->
+                                        <p id="test" class="crop">{{slide.description}}</p><br>För mer information, besök vår hemsida!
                                         <!-- Description for the event -->
                                     </div>
 
@@ -70,24 +68,26 @@
                                 <div class="col-md-12">
 
 
-                                    <div class="col-md-12">
+                                </div>
+                                <div class="col-md-12 speaker-information">
+                                    <!-- Description about the speaker -->
+                                    <span class="speakerheader">Föreläsare</span><br>
+                                    <span class="speaker">{{slide.speakerFullName}}</span>
+                                    <p>{{slide.speakerDescription}}</p>
+                                </div>
+                                <div class="col-md-12 speaker">
+                                        <span>Kontaktperson: <br></span>
+                                        <!-- Name of the contactperson -->
+                                </div>
+                                <div class="col-md-12">
                                         <div class="col-md-3"></div>
                                         <div class="col-md-6 img-position">
                                             <img class="img" src="{{slide.speakerImageUrl}}" alt="The speaker">
                                         </div>
                                         <div class="col-md-3"></div>
-                                    </div>
-
-                                    <div class="col-md-12 speaker">
-                                        <span>{{slide.speakerFullName}}</span>
-                                        <!-- Name of the speaker -->
-                                    </div>
-
-
                                 </div>
-                                <div class="col-md-12 speaker-information">
-                                    <!-- Description about the speaker -->
-                                    <p>{{slide.speakerDescription}}</p><br>
+                                <div class="col-md-12 contact-information">
+                                    <br>
                                     <p>Kontaktuppgifer:</p>
                                     <p><span>&#9993; {{slide.speakerEmail}}</span></p>
                                     <p><span>&#x2706; {{slide.speakerPhone}}</span></p>

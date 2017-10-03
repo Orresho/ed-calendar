@@ -3,7 +3,7 @@
 ******************************************************/
 span{
     color: #f05a1a;
-    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body{
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -28,7 +28,9 @@ body{
 .margin-right{
     padding-right: 2%;
 }
-
+label{
+    font-weight: 0;
+}
 /*****************************************************/
 /* Header of the event 
 /*****************************************************/
@@ -36,6 +38,8 @@ body{
     color: #f05a1a;
     padding: 3px;
     padding-left: 3%;
+    font-size: 40px;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial;
 }
 
 
@@ -80,12 +84,13 @@ body{
 .information{ 
     text-align: left;
     background-color: white;
-    /*height: 40vh; */
     padding: 3%;
-    font-size: 18px;
+    font-size: 25px;
 }
 .information-highlight{
-    color: #f05a1a
+    color: #f05a1a;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 0;
 }
 
 
@@ -100,24 +105,39 @@ body{
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
+    max-height: 270px;
 
 
 }
+.speakerheader{
+    font-size: 30px;
+}
 .speaker-information{ /* Description about the speaker */
-    margin-top: 3%;
-    padding: 3%;
+
     font-size: 18px;
     text-align: center;
     color: #666666;
-    
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 2%;
 }
+.contact-information{ /* Description about the speaker */
+    
+        font-size: 18px;
+        text-align: center;
+        color: #666666;
+        font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;       
+    }
+
 .speaker{ /* The speakers name */
     font-size: 27px;
     text-align: center;
     width: 100%;
     padding-top: 10px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 1%;
 }
+
 
 
 
@@ -149,4 +169,14 @@ body{
 }
 
 /*****************************************************/
-
+/* Limits the information "publicerad" */
+/*****************************************************/
+.crop{
+    display: -webkit-box;
+    width: 100%;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: hidden;
+    text-overflow: ellipsis;
+}
