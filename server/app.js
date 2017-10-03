@@ -11,7 +11,7 @@ var index = require('./routes/index');
 var events = require('./routes/events');
 
 // Name of the mongo database
-var dbName = 'ed-calendar';
+var dbName = 'SHEVENT';
 
 var app = express();
 
