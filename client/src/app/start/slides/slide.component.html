@@ -13,12 +13,14 @@
                     </div>
                 </div>
                 <div class="item" *ngFor="let slide of slides">
+                <div *ngIf="slide.location == 'Växjö'">                     <!-- Check if location is Växjö -->
                     <!-- Iterate through each slide -->
                     <div class="col-md-11">
                         <h1 class="eventHeader">{{slide.title}}</h1>
                         <!-- header for the seminare (svengelska) -->
                     </div>
                     <div class="row">
+                        
                         <div class="col-md-12">
                             <div class="col-md-8 margin-left">
                                 <!-- Left column with the event -->
@@ -90,8 +92,11 @@
                             </div>
                             <!-- end right column -->
                         </div>
-                    </div>
+                  
+                    </div> 
+                </div>                     <!-- Check if location is Växjö -->
                 </div>
+        
                 <!-- end of the slider -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
