@@ -4,7 +4,7 @@
 *******************************************************/
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -51,7 +51,7 @@ body {
 }
 
 .header{
-    background-color:white;
+    background-color:#ffffff;
     width: 100%;
     height: 90px;
     border-bottom: solid 1px #C9C7C7; 
