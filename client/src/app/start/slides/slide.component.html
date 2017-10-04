@@ -8,7 +8,6 @@
                     <div class="col-md-12 welcome-header">
                         <app-event-summary>
                             <!-- First slide with a header -->
-
                         </app-event-summary>
                         <!-- First slide with a header -->
                     </div>
@@ -21,13 +20,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-
                             <div class="col-md-8 margin-left">
                                 <!-- Left column with the event -->
                                 <div class="col-md-12 eventImage">
                                     <div class="col-md-12">
                                         <div class="col-md-8">
-                                            <img src="{{slide.imageUrl}}" alt="Los Angeles" class="img-event" style="width:100%;">
+                                            <img src="{{slide.imageUrl}}"class="img-event" style="width:100%;">
                                             <!-- img for the event -->
                                         </div>
                                         <div class="col-md-4 information">
@@ -40,7 +38,7 @@
                                             <span class="highlight">Språk: </span>{{slide.language}}
                                             <!-- Language -->
                                             <br>
-                                            <span class="highlight">DATUM: </span>{{slide.date}}
+                                            <span class="highlight">Datum: </span>{{slide.date}}
                                             <!-- Date -->
                                             <br>
                                             <span class="highlight">Plats: </span>{{slide.location}}
@@ -58,16 +56,12 @@
                                         <p id="test" class="crop">{{slide.description}}</p><br>För mer information, besök vår hemsida!
                                         <!-- Description for the event -->
                                     </div>
-
                                 </div>
                             </div>
                             <!-- end left column -->
-
                             <div class="col-md-4 margin-right">
                                 <!-- The right column with information and the speaker -->
                                 <div class="col-md-12">
-
-
                                 </div>
                                 <div class="col-md-12 speaker-information">
                                     <!-- Description about the speaker -->
@@ -76,21 +70,22 @@
                                     <p>{{slide.speakerDescription}}</p>
                                 </div>
                                 <div class="col-md-12 speaker">
-                                        <span>Kontaktperson: <br></span>
+                                        <span>Kontaktperson <br></span>
                                         <!-- Name of the contactperson -->
                                 </div>
                                 <div class="col-md-12">
                                         <div class="col-md-3"></div>
-                                        <div class="col-md-6 img-position">
-                                            <img class="img" src="{{slide.speakerImageUrl}}" alt="The speaker">
-                                        </div>
+                                            <div class="col-md-6 img-position">
+                                            <img class="img" src="{{slide.speakerImageUrl}}">
+                                            <!-- image of the contactperson -->
+                                            </div>                                                                       
                                         <div class="col-md-3"></div>
                                 </div>
                                 <div class="col-md-12 contact-information">
                                     <br>
-                                    <p>Kontaktuppgifer:</p>
-                                    <p><span>&#9993; {{slide.speakerEmail}}</span></p>
-                                    <p><span>&#x2706; {{slide.speakerPhone}}</span></p>
+                                    <p><span>Kontaktuppgifer</span></p>
+                                    <p>&#9993; {{slide.speakerEmail}}</p>
+                                    <p>&#x2706; {{slide.speakerPhone}}</p>
                                 </div>
                             </div>
                             <!-- end right column -->
@@ -98,7 +93,6 @@
                     </div>
                 </div>
                 <!-- end of the slider -->
-
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li *ngFor="let slide of slides; let i = index" data-target="#myCarousel" data-slide-to="i+1"></li>
