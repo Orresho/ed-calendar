@@ -30,6 +30,7 @@ body {
     color:white;
     display: block;
     transition: 0.3s;
+    text-align: center;
 }
 
 .sidenav a:hover {
@@ -59,11 +60,26 @@ span{
     margin-left: 5%;
     padding: 2%;
 }
-button{
-    margin-left: 10%;
-}
+
 .img{
     margin-top: 1%;
     margin-bottom: 1%;
 }
 /*******************************************************/
+
+.input-group{
+    width: 50%;
+}
+
+
+/*
+.form-group-test{
+    text-align: center;
+
+}
+
+.number{
+
+    font-size: 50px;
+    color: #f05a1a;
+}*/
