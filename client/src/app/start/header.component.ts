@@ -1,4 +1,4 @@
-import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Component, ViewChild, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -24,18 +24,10 @@ export class HeaderComponent implements OnInit {
 
     // intervall speed value changed on input.
     ngOnInit(){
-        // this.intervalForm = new FormGroup({
-        //     intervalSpeed: new FormControl(null, Validators.required)
-        // });
-
 
     }
 
     onSubmit(form: NgForm){
-        // console.log("change inside child");
-        // // console.log(this.intervallForm.value);
-        // this.speed = this.intervalForm.value;
-        // console.log(this.intervalForm.value);
         console.log('Headercomponent: ' + form.value.interval);
         this.onSpeedChange.emit(form.value.interval);
     }
