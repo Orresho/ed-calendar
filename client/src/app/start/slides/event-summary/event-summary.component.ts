@@ -17,7 +17,7 @@ export class EventSummaryComponent implements OnInit {
         this.slideService.getSlides()
           .subscribe((slides: Slide[]) => {
               return this.slides = slides;
-          })
+          });
           
     }
 

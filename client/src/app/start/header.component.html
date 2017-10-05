@@ -4,49 +4,79 @@
     <a>Change interval</a>
     <br />
 
-<div class="row">
+    <div class="row">
         <div class="col-md-10 col-md-offset-2">
 
             <div class="input-group">
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Action
                         </button>
-                        <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                         <div role="separator" class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
                     </div>
+                </div>
             </div>
 
         </div>
         <br>
         <br>
-        <div class="col-mg-10 col-md-offset-2">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-            </div>
-        </div>
-</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
 
+    <!-- Button for changing interval value -->
+    <!-- <form [formGroup]="intervalForm" (ngSubmit)="onSubmit()">
+        <label for="interval">Interval</label>
+        <input 
+                type="text"
+                class="form-control"
+                placeholder="Enter value"
+                formControlName="intervalSpeed"
+                 >
+        <span class="input-group-btn">
+        <button
+                class="btn btn-secondary"
+                type="submit"
+                [disabled]="!intervalForm.valid">Apply</button>
+        </span>
+    </form> -->
 
+  <!-- Button for changing interval value -->
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <label for="interval">Interval</label>
+        <input 
+                type="text"
+                class="form-control"
+                placeholder="Enter value"
+                name="interval"
+                ngModel
+                required
+                 >
+        <span class="input-group-btn">
+        <button
+                class="btn btn-secondary"
+                type="submit"
+                >Apply</button>
+        </span>
+    </form>
 
-
-    
     <br>
     <br>
     <a>Change interval</a>
     <br />
 
     <div class="form-group-test">
-            <button>&#x25B2;</button><br>
+        <button>&#x25B2;</button><br>
         <label class="number" for="email">100</label><br>
         <button>&#x25BC;</button>
     </div>
@@ -59,6 +89,8 @@
         <img class="img" src="http://education.hemsida.eu/wp-content/uploads/2015/10/softhouse-education-logo1-300x58.png">
     </span>
 </div>
+
+
 
 <!-- Save for later
 

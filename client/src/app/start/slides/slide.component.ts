@@ -1,5 +1,5 @@
 import { SlideService } from './slide.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 //Import image interface
 import { Slide } from './slide.model';
@@ -11,13 +11,16 @@ import { Slide } from './slide.model';
 })
 export class SlideComponent implements OnInit {
     slides: Slide[];
-    
-    constructor(private slideService: SlideService){}
+    @Input() speedes: string;
 
+    // https://www.google.ba/search?q=property+bind+custom+attributes&rlz=1C1TIGY_enSE758SE758&oq=property+bind+custom+attributes&aqs=chrome..69i57.5675j0j4&sourceid=chrome&ie=UTF-8
+    constructor(private slideService: SlideService){
+    }
+    
     ngOnInit(){
         this.slideService.getSlides()
             .subscribe((slides: Slide[]) => {
-                this.slides = slides;
+                return this.slides = slides;
                 // console.log(slides);
             });
     }

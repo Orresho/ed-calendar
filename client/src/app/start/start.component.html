@@ -1,10 +1,10 @@
-<app-header>
+<app-header (onSpeedChange)="speedChangeValue($event)">
 </app-header>
 <div class="container-fluid">
 <div class="row">
     <div class="col-md-12">
         <div class="slider-selector">
-            <app-slide></app-slide>
+            <app-slide [speedes]="speed"></app-slide>
         </div>
     </div>
 </div>

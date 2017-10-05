@@ -9,8 +9,14 @@ import { Component } from '@angular/core';
 export class StartComponent {
 
     value:number = 12;
+    speed = 5000; // default value
 
     changeValue():void {
         this.value += 1;
+    }
+
+    speedChangeValue(speed: number):void {
+        console.log("changes in parent: "+ speed)
+        this.speed = speed;
     }
 }
