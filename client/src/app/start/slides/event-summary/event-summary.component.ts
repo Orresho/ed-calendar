@@ -22,7 +22,6 @@ export class EventSummaryComponent implements OnInit {
                             //console.log(slide);
                             this.slides.push(slide)
                         }
-            //console.log(slides);
             });
     } 
 

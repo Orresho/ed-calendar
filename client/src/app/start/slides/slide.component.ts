@@ -27,8 +27,6 @@ export class SlideComponent implements OnInit, OnChanges {
                     if(slide['location'] == 'Växjö'){
                         //console.log(slide);
                         this.slides.push(slide)
-                        
-                    
                     }
         //console.log(slides);
         });
