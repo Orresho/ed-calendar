@@ -5,6 +5,7 @@ import { Component, OnInit, Input, AfterViewInit, OnChanges } from '@angular/cor
 import { Slide } from './slide.model';
 declare var jQuery;
 
+
 @Component({
     selector: 'app-slide',
     templateUrl: './slide.component.html',
@@ -19,11 +20,18 @@ export class SlideComponent implements OnInit, OnChanges {
     
     ngOnInit(){
         console.log("init - " + this.speedes)
-        
         this.slideService.getSlides()
             .subscribe((slides: Slide[]) => {
-                return this.slides = slides;
-            });
+                this.slides = [];
+                for(var slide of slides)
+                    if(slide['location'] == 'Växjö'){
+                        //console.log(slide);
+                        this.slides.push(slide)
+                        
+                    
+                    }
+        //console.log(slides);
+        });
     }
    
     ngOnChanges() {
@@ -34,4 +42,8 @@ export class SlideComponent implements OnInit, OnChanges {
         
         jQuery('#myCarousel').carousel('cycle');
     }
+              
+    
+        
+
 }

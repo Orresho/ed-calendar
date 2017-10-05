@@ -1,4 +1,5 @@
 import { Slide } from './slide.model';
+
 import { Injectable } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import 'rxjs/Rx';
@@ -10,13 +11,18 @@ export class SlideService{
     
     // Main slides array
     private slides: Slide[] = [];
+   
+   
 
     getSlides(){
         return this.http.get('http://localhost:3000/event')
             .map((response: Response) => {
-                // console.log(response);
-                return this.slides = response.json().obj;
+                
+                    return this.slides =  response.json().obj;
+               //this.slides = response.json().obj;
+               
             })
             .catch((error:Response) => Observable.throw(error.json()));
+       
     }
 }

@@ -13,12 +13,17 @@ export class EventSummaryComponent implements OnInit {
 
     slides: Slide[];
 
-    ngOnInit(){
+     ngOnInit(){
         this.slideService.getSlides()
-          .subscribe((slides: Slide[]) => {
-              return this.slides = slides;
-          });
-          
-    }
+            .subscribe((slides: Slide[]) => {
+                this.slides = [];
+                    for(var slide of slides)
+                        if(slide['location'] == 'Växjö'){
+                            //console.log(slide);
+                            this.slides.push(slide)
+                        }
+            //console.log(slides);
+            });
+    } 
 
 }
