@@ -38,7 +38,6 @@ export class HeaderComponent implements OnInit {
         // console.log(this.intervalForm.value);
         console.log('Headercomponent: ' + form.value.interval);
         this.onSpeedChange.emit(form.value.interval);
-        
     }
 
     // onSubmit(){
