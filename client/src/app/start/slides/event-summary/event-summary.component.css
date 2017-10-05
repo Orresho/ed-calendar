@@ -2,11 +2,8 @@
 /* Global variables */
 /****************************************/
 body{
-    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-    
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
 }
-
 ul {
     list-style-type: none;
     margin-left: 1.5%;
@@ -15,26 +12,23 @@ ul {
     font-size: 15px;
 }
 span{
-    color: #f05a1a;
+    color: #ea6502 !important;
     font-weight: 600;
-    font-family: "Georgia", "Times New Roman", Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 20px;
 }
-
 li {
     float: left;
     padding: 1px;
     color: #666666;
     min-height: 325px;
 }
-
 li a {
     display: block;
     text-align: center;
     text-decoration: none;
     text-align: left;
 }
-
 .img-event{
     
     color: #666666;
@@ -49,8 +43,9 @@ li a {
     display: table-cell;
 }
 .header{
-    font-size: 40px;
+    font-size: 34px;
+    line-height: 1.1em;
     margin-left: 3.5%;
-    color: #f05a1a;
-    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial;
+    color: #ea6502 !important;
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

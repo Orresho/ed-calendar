@@ -3,19 +3,17 @@
     <div class="col-md-12">
       <h1 class="header">Upcomming seminares</h1>
       <ul>
-        <li data-target="#myCarousel" data-slide-to="i+1" *ngFor="let slide of slides">
-          
-          <div class="col-md-3">
-            <div class="info-event">
-              <img src="{{slide.imageUrl}}" alt="Los Angeles" class="img-event" style="width: 300px;">
-              <!-- img for the event -->
-
-              <span>{{slide.title}}</span><br> {{slide.location}}  {{slide.date}}
-              <br>
+        <li data-target="#myCarousel" data-slide-to="i+1" *ngFor="let slide of slides" >
+          <div *ngIf="slide.location == 'Växjö'">
+              <div class="col-md-3">
+                  <div class="info-event">
+                    <img src="{{slide.imageUrl}}" alt="Los Angeles" class="img-event" style="width: 300px;">
+                    <!-- img for the event -->
+                    <span>{{slide.title}}</span><br> {{slide.location}}  {{slide.date}}
+                    <br>
+                  </div>
+              </div> 
             </div>
-          </div>
-
-
         </li>
       </ul>
     </div>
