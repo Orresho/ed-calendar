@@ -12,16 +12,34 @@ export class EventSummaryComponent implements OnInit {
     constructor(private slideService: SlideService){}
 
     slides: Slide[];
-
-     ngOnInit(){
+    
+    ngOnInit(){
         this.slideService.getSlides()
             .subscribe((slides: Slide[]) => {
                 this.slides = [];
-                    for(var slide of slides)
-                        if(slide['location'] == 'Växjö'){
-                            //console.log(slide);
-                            this.slides.push(slide)
+                for(var slide of slides){
+                     let dateString = slide['numericDate'];
+                     let newDate = new Date(dateString);
+                     let today = new Date(Date.now());
+                    if(slide['location'] == 'Växjö'){
+                       if(newDate > today){
+                            console.log(newDate);
+                            this.slides.push(slide);
+                
+                            
                         }
+                    }             
+                            this.slides.sort((obj1, obj2) => {
+                                if (obj1['numericDate'] > obj2['numericDate']) {
+                                    return 1;
+                                }
+
+                                if (obj1['numericDate'] < obj2['numericDate']) {
+                                    return -1;
+                                }
+
+                                return 0;
+                            });}
             });
     } 
 
