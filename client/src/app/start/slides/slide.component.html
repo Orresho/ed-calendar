@@ -73,19 +73,27 @@
                                     <span>{{slide.contactPerson}}<br></span>
                                     <!-- Name of the contactperson -->
                                 </div>
+                                <div *ngIf = "slide.contactImageUrl != ''"> 
                                 <div class="col-md-12">
                                     <div class="col-md-3"></div>
-                                    <div class="col-md-6 img-position">
+                                    <div class="col-md-6 img-position">                                       
                                         <img class="img" src="{{slide.contactImageUrl}}">
                                         <!-- image of the contactperson -->
                                     </div>
                                     <div class="col-md-3"></div>
                                 </div>
+                                </div>
                                 <div class="col-md-12 contact-information">
                                     <br>
+                                    <div *ngIf = "slide.contactEmail != ''|| slide.contactPhone != '' ">   
                                     <p><span>Kontaktuppgifter</span></p>
+                                    </div>
+                                <div *ngIf = "slide.contactEmail != ''">                                   
                                     <p>&#9993; {{slide.contactEmail}}</p>
+                                </div>
+                                <div *ngIf = "slide.contactPhone != ''">
                                     <p>&#x2706; {{slide.contactPhone}}</p>
+                                </div>
                                 </div>
                             </div>
                             <!-- end right column -->
