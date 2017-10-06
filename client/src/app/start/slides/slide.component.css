@@ -99,6 +99,9 @@ label{
     height: 100%;
     background-repeat: no-repeat;
     max-height: 255px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #e1e1e1;
     
 }
 .speakerheader{

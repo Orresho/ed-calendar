@@ -1,38 +1,49 @@
 <div [style.width.px]="sideWidth" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <br />
-    <a>Change interval</a>
-    <br />
 
+
+
+  <!-- Button for changing interval value -->
     <div class="row">
-        <div class="col-md-10 col-md-offset-2">
-
+        <div class="center-block">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
             <div class="input-group">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Action
-                        </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </div>
+                <a>Change interval</a>
+                <br>
+            <input 
+                    id="interval"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter the interval.."
+                    name="interval"
+                    ngModel
+                    required
+                    >
+            <div class="input-group-btn">
+            <button
+                    class="btn btn-primary"
+                    type="submit"
+                    >Commit</button>
             </div>
-
+            </div>
+        </form>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
+
+
+
+
+
+</div>
+
+<div class="header">
+    <span style="cursor:pointer" (click)="openNav()">
+        <img class="img" src="http://education.hemsida.eu/wp-content/uploads/2015/10/softhouse-education-logo1-300x58.png">
+    </span>
+</div>
+
+<!--  ************************************************* -->
+
 
     <!-- Button for changing interval value -->
     <!-- <form [formGroup]="intervalForm" (ngSubmit)="onSubmit()">
@@ -51,28 +62,7 @@
         </span>
     </form> -->
 
-  <!-- Button for changing interval value -->
-  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <label for="interval">Interval</label>
-        <input 
-                id="interval"
-                type="text"
-                class="form-control"
-                placeholder="Enter value"
-                name="interval"
-                ngModel
-                required
-                 >
-        <span class="input-group-btn">
-        <button
-                class="btn btn-secondary" value="Refresh Page"  onclick="window.location.reload()"
-                type="submit"
-                >Apply</button>
-        </span>
-    </form>
 
-    <br>
-    <br>
     <a>Change interval</a>
     <br />
 
@@ -81,34 +71,5 @@
         <label class="number" for="email">100</label><br>
         <button>&#x25BC;</button>
     </div>
-
-
-</div>
-
-<div class="header">
-    <span style="cursor:pointer" (click)="openNav()">
-        <img class="img" src="http://education.hemsida.eu/wp-content/uploads/2015/10/softhouse-education-logo1-300x58.png">
-    </span>
-</div>
-
-
-
-<!-- Save for later
-
-        <div class="input-group">
-      <input type="text" class="form-control" aria-label="Text input with dropdown button">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Action
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
-    </div>
-
 -->
+
