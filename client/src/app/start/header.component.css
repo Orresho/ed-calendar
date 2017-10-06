@@ -66,20 +66,27 @@ span{
     margin-bottom: 1%;
 }
 /*******************************************************/
-
-.input-group{
-    width: 50%;
+.col-lg-3 {
+    width: 100%;
+  }
+  .input-group {
+     margin: 0 auto;
+}
+.input-group-btn{
+    display: block; 
+}
+.form-control{
+    width: 70%;
 }
 
-
-/*
-.form-group-test{
-    text-align: center;
-
+.btn-primary{
+    background-color: #f05a1a;
+    border-color: #f05a1a;
 }
-
-.number{
-
-    font-size: 50px;
+.btn-primary:active{
+    background-color: white;
     color: #f05a1a;
-}*/
+}
+#interval{
+    border-radius: 4%;
+}
