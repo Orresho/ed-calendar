@@ -8,8 +8,6 @@ import { Component, ViewChild, Input, OnInit, Output, EventEmitter } from '@angu
 })
 
 export class HeaderComponent implements OnInit {
-    // intervalForm: FormGroup;
-    // @Input() speed;
     @Output() onSpeedChange = new EventEmitter<number>();
     @Input() time:number;
     @ViewChild('sidenav') sidenav: any;
@@ -27,18 +25,10 @@ export class HeaderComponent implements OnInit {
 
     }
 
+    // use form property to access and emit interval value 
     onSubmit(form: NgForm){
         console.log('Headercomponent: ' + form.value.interval);
         this.onSpeedChange.emit(form.value.interval);
         
     }
-
-    // onSubmit(){
-    //     console.log("change inside childe")
-    //     // // console.log(this.intervallForm.value);
-    //     // this.speed = this.intervalForm.value;
-    //     console.log(this.intervalForm.value);
-    //     this.onSpeedChange.emit(2222);
-    // }
-
 }

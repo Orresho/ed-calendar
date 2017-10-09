@@ -1,9 +1,11 @@
+<!-- binding the "onSpeedChange" event to a new event "speedChangeValue" which recieves the value from the "onSpeedChange" input we emitted -->
 <app-header (onSpeedChange)="speedChangeValue($event)">
 </app-header>
 <div class="container-fluid">
 <div class="row">
     <div class="col-md-12">
         <div class="slider-selector">
+            <!-- We bind the speedes property from slide.component.ts and fetch the value from "speed" property in start.component.ts -->
             <app-slide [speedes]="speed"></app-slide>
         </div>
     </div>

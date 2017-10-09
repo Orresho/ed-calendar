@@ -5,8 +5,6 @@ import { Component, OnInit, Input, AfterViewInit, OnChanges } from '@angular/cor
 import { Slide } from './slide.model';
 declare var jQuery;
 
-
-
 @Component({
     selector: 'app-slide',
     templateUrl: './slide.component.html',
@@ -15,53 +13,49 @@ declare var jQuery;
 export class SlideComponent implements OnInit, OnChanges {
     slides: Slide[];
     @Input() speedes: string;
-    
-    
-    constructor(private slideService: SlideService){
+
+
+    constructor(private slideService: SlideService) {
     }
-    ngOnInit(){
+    ngOnInit() {
         console.log("init - " + this.speedes)
         this.slideService.getSlides()
             .subscribe((slides: Slide[]) => {
                 this.slides = [];
-                for(var slide of slides){
-                     let dateString = slide['numericDate'];
-                     let newDate = new Date(dateString);
-                     let today = new Date(Date.now());
-                    if(slide['location'] == 'Växjö'){
-                       if(newDate > today){
+                for (var slide of slides) {
+                    let dateString = slide['numericDate'];
+                    let newDate = new Date(dateString);
+                    let today = new Date(Date.now());
+                    if (slide['location'] == 'Växjö') {
+                        if (newDate > today) {
                             console.log(newDate);
                             this.slides.push(slide);
                         }
-                    }            
-                             this.slides.sort((obj1, obj2) => {
-                                if (obj1['numericDate'] > obj2['numericDate']) {
-                                    return 1;
-                                }
+                    }
+                    this.slides.sort((obj1, obj2) => {
+                        if (obj1['numericDate'] > obj2['numericDate']) {
+                            return 1;
+                        }
 
-                                if (obj1['numericDate'] < obj2['numericDate']) {
-                                    return -1;
-                                }
+                        if (obj1['numericDate'] < obj2['numericDate']) {
+                            return -1;
+                        }
 
-                                return 0;
-            });}
-        //console.log(slides);
-        });
-    
+                        return 0;
+                    });
+                }
+                //console.log(slides);
+            });
     }
-   
+
     ngOnChanges() {
         //console.log("change - " + this.speedes)
         jQuery('#myCarousel').carousel({
             interval: this.speedes
         });
-        
+
         jQuery('#myCarousel').carousel('cycle');
 
         console.log(this.speedes);
     }
-              
-    
-        
-
 }
