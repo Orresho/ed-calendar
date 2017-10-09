@@ -9,6 +9,9 @@ body {
     margin-right: 0;
     margin-top: 0;
 }
+#Interval-text{
+    pointer-events: none;
+}
 
 .sidenav {
     height: 100%;

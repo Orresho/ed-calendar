@@ -4,7 +4,10 @@
 span{
     color: #f05a1a;
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    
+    pointer-events: none;
+}
+div{
+    pointer-events: none;
 }
 
 
@@ -16,7 +19,7 @@ span{
 /* The global slider scope 
 ******************************************************/
 #slider{
-    margin-top: 4%;
+    margin-top: 1%;
     margin-bottom: 4%;
 }
 
@@ -35,7 +38,7 @@ label{
 .eventHeader{
     color: #ea6502 !important;
     padding: 3px;
-    padding-left: 3%;
+    padding-left: 2.5%;
     font-size: 34px;
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial;
 }
@@ -81,6 +84,7 @@ label{
     background-color: white;
     padding: 3%;
     font-size: 20px;
+    
 }
 .information-highlight{
     color: #f05a1a;
@@ -142,8 +146,8 @@ label{
 /*****************************************************/
 .carousel-indicators{
     position: fixed;
-    padding: 2%;
-    margin-bottom: 2%;
+    padding: 0%;
+    margin-bottom: 0%;
 
 }
 .carousel-indicators li {

@@ -29,6 +29,7 @@ export class EventSummaryComponent implements OnInit {
 
                         }
                     }
+                    
                     this.slides.sort((obj1, obj2) => {
                         if (obj1['numericDate'] > obj2['numericDate']) {
                             return 1;
