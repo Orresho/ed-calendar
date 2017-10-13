@@ -10,18 +10,21 @@ ul {
     padding: 0;
     overflow: hidden;
     font-size: 15px;
+    margin-top: 2px;
 }
 span{
     color: #ea6502 !important;
     font-weight: 600;
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 li {
     float: left;
     padding: 1px;
-    color: #666666;
-    min-height: 325px;
+    color: rgb(102, 102, 102);
+    min-height: 250px;
+    margin-left: 5px;
+
 }
 li a {
     display: block;
@@ -33,11 +36,13 @@ li a {
     
     color: #666666;
     border-radius: 2%;
+    content: center;
+    width: 250px;
     
 }
 .info-event{
-    padding: 8px;
-    width: 400px;
+
+    width: 300px;
     vertical-align: top;
     padding-bottom: 30px;
     display: table-cell;
@@ -45,7 +50,13 @@ li a {
 .header{
     font-size: 34px;
     line-height: 1.1em;
-    margin-left: 2.5%;
+    margin-left: 4.5%;
     color: #ea6502 !important;
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+.sidostreck{
+    border-left: solid 1px #C9C7C7;
+}
+.col-md-12{
 }

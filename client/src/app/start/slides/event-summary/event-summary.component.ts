@@ -21,11 +21,12 @@ export class EventSummaryComponent implements OnInit {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (slide['location'] == 'Växjö') {
+                    if (slide['location'] == 'Malmö','Växjö', 'Göteborg', 'Karlskrona', 'Lund') {
                         if (newDate > today) {
                             console.log(newDate);
-                            this.slides.push(slide);
-
+                            if (this.slides.length < 4){
+                                this.slides.push(slide);
+                            }
 
                         }
                     }
