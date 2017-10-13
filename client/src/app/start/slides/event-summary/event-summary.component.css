@@ -10,6 +10,7 @@ ul {
     padding: 0;
     overflow: hidden;
     font-size: 15px;
+    margin-top: 2px;
 }
 span{
     color: #ea6502 !important;
@@ -36,11 +37,11 @@ li a {
     color: #666666;
     border-radius: 2%;
     content: center;
-    width: 230px;
+    width: 250px;
     
 }
 .info-event{
-    padding: 8px;
+
     width: 300px;
     vertical-align: top;
     padding-bottom: 30px;
@@ -49,10 +50,13 @@ li a {
 .header{
     font-size: 34px;
     line-height: 1.1em;
-    margin-left: 5%;
+    margin-left: 4.5%;
     color: #ea6502 !important;
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 }
 .sidostreck{
     border-left: solid 1px #C9C7C7;
+}
+.col-md-12{
 }
