@@ -12,12 +12,27 @@ declare var jQuery;
 })
 export class SlideComponent implements OnInit, OnChanges {
     slides: Slide[];
+    courses: Slide[];
+    
     @Input() speedes: string;
 
+    constructor(private slideService: SlideService) { }
 
-    constructor(private slideService: SlideService) {
-    }
     ngOnInit() {
+
+        // Run getSeminars
+        this.getSeminars();
+
+        // Run getCourses
+        this.getCourses();
+
+        // this.slides.concat(this.courses);
+
+    }
+
+    
+    // Get Seminars
+    getSeminars() {
         console.log("init - " + this.speedes)
         this.slideService.getSeminars()
             .subscribe((slides: Slide[]) => {
@@ -32,6 +47,8 @@ export class SlideComponent implements OnInit, OnChanges {
                             this.slides.push(slide);
                         }
                     }
+
+                    // Sort by date
                     this.slides.sort((obj1, obj2) => {
                         if (obj1['numericDate'] > obj2['numericDate']) {
                             return 1;
@@ -44,9 +61,42 @@ export class SlideComponent implements OnInit, OnChanges {
                         return 0;
                     });
                 }
-                //console.log(slides);
             });
     }
+
+    // Get Courses
+    getCourses() {
+        this.slideService.getCourses()
+            .subscribe((slides: Slide[]) => {
+                this.slides = [];
+                for (var slide of slides) {
+                    // console.log(slide);
+                    let dateString = slide['numericDate'];
+                    let newDate = new Date(dateString);
+                    let today = new Date(Date.now());
+                    if (slide['location'] == 'Växjö') {
+                        console.log(slide)
+                        if (newDate > today) {
+                            console.log(newDate);
+                            this.slides.push(slide);
+                        }
+                    }
+                    
+                    // Sort by date
+                    this.slides.sort((obj1, obj2) => {
+                        if (obj1['numericDate'] > obj2['numericDate']) {
+                            return 1;
+                        }
+
+                        if (obj1['numericDate'] < obj2['numericDate']) {
+                            return -1;
+                        }
+
+                        return 0;
+                    });
+                }
+            });
+        }
 
     ngOnChanges() {
         //console.log("change - " + this.speedes)

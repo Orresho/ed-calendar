@@ -14,7 +14,7 @@ export class EventSummaryComponent implements OnInit {
     slides: Slide[];
 
     ngOnInit() {
-        this.slideService.getSlides()
+        this.slideService.getSeminars()
             .subscribe((slides: Slide[]) => {
                 this.slides = [];
                 for (var slide of slides) {
@@ -23,7 +23,7 @@ export class EventSummaryComponent implements OnInit {
                     let today = new Date(Date.now());
                     if (slide['location'] == 'Växjö') {
                         if (newDate > today) {
-                            console.log(newDate);
+                            // console.log(newDate);
                             this.slides.push(slide);
 
 
