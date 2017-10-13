@@ -19,7 +19,7 @@ export class SlideComponent implements OnInit, OnChanges {
     }
     ngOnInit() {
         console.log("init - " + this.speedes)
-        this.slideService.getSlides()
+        this.slideService.getSeminars()
             .subscribe((slides: Slide[]) => {
                 this.slides = [];
                 for (var slide of slides) {
