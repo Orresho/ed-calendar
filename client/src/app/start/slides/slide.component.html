@@ -18,7 +18,6 @@
                     <!-- COURSE SECTION-->
                     <div *ngIf="slide.eventType != 'seminar'">
                         <h1>This is a COURSE</h1>
-                         <!-- SEMINAR SECTION -->
                     <div class="col-md-11">
                             <h1 class="eventHeader">{{slide.title}}</h1>
                             <!-- header for the seminare (svengelska) -->
@@ -111,9 +110,10 @@
                                 <!-- end right column -->
                             </div>
                         </div>
-
                     </div>
 
+
+                    <!-- SEMINAR SECTION -->
                     <div *ngIf="slide.eventType == 'seminar'">
                         <!-- SEMINAR SECTION -->
                         <div class="col-md-11">
