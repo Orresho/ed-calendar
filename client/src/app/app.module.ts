@@ -1,3 +1,4 @@
+import { SlideService } from './start/slides/slide.service';
 import { SlideComponent } from './start/slides/slide.component';
 import { HeaderComponent } from './start/header.component';
 import { StartComponent } from './start/start.component';
@@ -25,7 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [SlideService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
