@@ -37,6 +37,7 @@ export class SlideComponent implements OnInit, OnChanges {
                     let today = new Date(Date.now());
                     if (slide['location'] == 'Växjö') {
                         if (newDate > today) {
+                            console.log(this.slides);
                             this.slides.push(slide);
                         }
                     }

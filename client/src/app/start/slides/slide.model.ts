@@ -13,7 +13,8 @@ export class Slide {
         speakerDescription: String,
         speakerEmail: String,
         speakerPhone: String,
-        location: String
+        location: String,
+        eventType?: String
     ){}
 }
 
