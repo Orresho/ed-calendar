@@ -9,6 +9,7 @@ const cors = require('cors');
 
 var index = require('./routes/index');
 var events = require('./routes/events');
+var courses = require('./routes/courses');
 
 // Name of the mongo database
 var dbName = 'SHEVENT';
@@ -35,6 +36,7 @@ app.use(cors());
 
 // Use event middleware at localhost:3000/event
 app.use('/event', events);
+app.use('/course', courses);
 app.use('/', index);
 
 // catch 404 and forward to error handler

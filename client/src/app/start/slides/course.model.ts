@@ -1,4 +1,4 @@
-export class Slide {
+export class Course {
     constructor(
         title: String,
         imageUrl: String,
@@ -16,4 +16,3 @@ export class Slide {
         location: String
     ){}
 }
-
