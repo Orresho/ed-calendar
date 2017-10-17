@@ -19,7 +19,9 @@ var eventSchema = new Schema({
     contactEmail: {type: String},
     contactPhone: {type: String},
     contactPerson: {type: String},
-    eventType: {type: String}
+    type: {type: String, required: true},
+    courseContactName:{type: String},
+    v:{type: String}
 });
 
 module.exports = mongoose.model('Seminars', eventSchema);
