@@ -23,10 +23,10 @@
           <li data-target="#myCarousel" data-slide-to="i+1" *ngFor="let course of courses">
             <div class="col-md-2">
               <div class="info-event">
-                <div *ngIf=course.imageUrl != ''>
+               <!-- <div *ngIf=course.imageUrl != ''> -->
                   <img src="{{course.imageUrl}}" class="img-event">
                 <!-- img for the event -->
-                </div>
+                
                 <div *ngIf="course.imageUrl == ''">
                   <img src="http://www.softhouse.se/wp-content/uploads/2014/09/softhouse_logotyp.png" class="img-event">
                 </div>
