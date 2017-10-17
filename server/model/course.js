@@ -18,7 +18,11 @@ var courseSchema = new Schema({
     speakerDescription: {type: String},
     contactEmail: {type: String},
     contactPhone: {type: String},
-    contactPerson: {type: String}
+    contactPerson: {type: String},
+    courseInformation: {type: String},
+    courseContactName: {type: String},
+    type: {type: String}
+    
 });
 
 module.exports = mongoose.model('Courses', courseSchema);
