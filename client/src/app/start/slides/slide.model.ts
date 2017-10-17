@@ -14,7 +14,8 @@ export class Slide {
         speakerEmail: String,
         speakerPhone: String,
         location: String,
-        eventType?: String
+        type: String,
+        courseContactName: String
     ){}
 }
 

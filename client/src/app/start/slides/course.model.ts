@@ -13,6 +13,9 @@ export class Course {
         speakerDescription: String,
         speakerEmail: String,
         speakerPhone: String,
-        location: String
+        location: String,
+        type: String,
+        courseContactName: String,
+        courseInformation:String
     ){}
 }

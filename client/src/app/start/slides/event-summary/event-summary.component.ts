@@ -64,11 +64,10 @@ export class EventSummaryComponent implements OnInit {
                     let dateString = course['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (course['location'] == 'Växjö') {
-                        if (newDate > today) {
-                            this.courses.push(course);
-                        }
+                    if (course['courseInformation'].includes('Växjö')) {
+                        this.courses.push(course);
                     }
+
 
                     // Sort by date
                     this.courses.sort((obj1, obj2) => {
@@ -82,8 +81,12 @@ export class EventSummaryComponent implements OnInit {
 
                         return 0;
                     });
+
                 }
             });
     }
+
+
+    
 
 }

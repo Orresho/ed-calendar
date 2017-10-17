@@ -17,6 +17,7 @@ span{
     font-weight: 600;
     font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 15px;
+
 }
 li {
     float: left;
@@ -46,6 +47,9 @@ li a {
     vertical-align: top;
     padding-bottom: 30px;
     display: table-cell;
+    padding-bottom:20px;
+    margin-bottom: 20px;
+
 }
 .header{
     font-size: 34px;
@@ -57,6 +61,4 @@ li a {
 }
 .sidostreck{
     border-left: solid 1px #C9C7C7;
-}
-.col-md-12{
 }
