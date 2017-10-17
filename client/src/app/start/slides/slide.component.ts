@@ -38,7 +38,7 @@ export class SlideComponent implements OnInit, OnChanges {
                     if (slide['location'] == 'Växjö') {
                         if (newDate > today) {
                             console.log(this.slides);
-                            this.slides.push(slide);
+                                this.slides.push(slide);
                         }
                     }
 
@@ -54,6 +54,7 @@ export class SlideComponent implements OnInit, OnChanges {
 
                         return 0;
                     });
+
                 }
             });
     }
@@ -66,11 +67,11 @@ export class SlideComponent implements OnInit, OnChanges {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (slide['location'] == 'Växjö') {
-                        if (newDate > today) {
+                    if (slide['courseInformation'].includes('Växjö')) {
+                        
                             this.slides.push(slide);
-                        }
                     }
+                    
 
                     // Sort by date
                     this.slides.sort((obj1, obj2) => {
@@ -84,6 +85,7 @@ export class SlideComponent implements OnInit, OnChanges {
 
                         return 0;
                     });
+                    
                 }
             });
     }
