@@ -1,5 +1,6 @@
 import { NgForm } from '@angular/forms';
 import { Component, ViewChild, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { ShareService } from './services/share.service';
 
 @Component({
     selector: 'app-header',
@@ -8,9 +9,14 @@ import { Component, ViewChild, Input, OnInit, Output, EventEmitter } from '@angu
 })
 
 export class HeaderComponent implements OnInit {
+    constructor(public shareService: ShareService) {
+
+    }
     @Output() onSpeedChange = new EventEmitter<number>();
     @Input() time:number;
     @ViewChild('sidenav') sidenav: any;
+
+    @Output() selectCity = new EventEmitter<String>();
 
     sideWidth:any = 0;
     openNav(event) {
@@ -25,10 +31,29 @@ export class HeaderComponent implements OnInit {
 
     }
 
+    test(value){
+       // console.log(value)
+        this.selectCity.emit(value);
+        this.shareService.setCity = value;
+    }
+
+    // 
+
     // use form property to access and emit interval value 
     onSubmit(form: NgForm){
         console.log('Headercomponent: ' + form.value.interval);
         this.onSpeedChange.emit(form.value.interval);
         
     }
+    citys = [
+        {name: "Växjö"},
+        {name: "Malmö"},
+        {name: "Karlskrona"},
+        {name: "Lund"},
+        {name: "Helsingborg"}
+    ];
+    selectedValue = null;
+
+
+    
 }

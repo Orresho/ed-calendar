@@ -26,21 +26,16 @@
                                 <div class="col-md-8 margin-left">
                                     <!-- Left column with the event -->
                                     <div class="col-md-12 eventImage">
-                                        <div class="col-md-12">
-                                            <div class="col-md-12">
-                                                   
-                                                        <img src="{{slide.imageUrl}}" class="img-event" style="max-height:700px;">
+                                        <div class="col-md-12" *ngIf="slide.imageUrl != ''">
+                                            <div class="col-md-12">                                           
+                                                <img src="{{slide.imageUrl}}" class="img-event" style="max-height:700px;">
                                                 <!-- img for the event -->
-                                                  
-
                                             </div>
-
                                         </div>
                                         <div class="col-md-12" class="event-description">
-                                            <span class="speakerheader">Kursbeskrivning</span>
-                                            <b>{{slide.subHeading}}</b>
-                                            <!-- header for the event description -->
-                                            <br>
+                                            <div *ngIf="slide.imageUrl == ''">
+                                                <span class="speakerheader">Kursinformation</span>
+                                            </div>
                                             <br>
                                             <!-- limits the lenght of the description -->
                                             <p id="test" class="crop-course">{{slide.description}}</p>

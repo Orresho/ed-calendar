@@ -1,7 +1,8 @@
 import { Slide } from './../slide.model';
 import { SlideService } from './../slide.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SlideComponent } from '../slide.component';
+import { ShareService } from '../../services/share.service';
 
 @Component({
     selector: 'app-event-summary',
@@ -9,10 +10,18 @@ import { SlideComponent } from '../slide.component';
     styleUrls: ['./event-summary.component.css']
 })
 export class EventSummaryComponent implements OnInit {
-    constructor(private slideService: SlideService) { }
+    constructor(private slideService: SlideService,
+                public shareService: ShareService ) {
+                    console.log("SHARE ", this.shareService.getCity());
+                 }
+
+    @Input() selectedValue: string;
+
 
     slides: Slide[];
     courses: Slide[];
+
+   
 
     ngOnInit() {
 
@@ -24,6 +33,10 @@ export class EventSummaryComponent implements OnInit {
 
     }
 
+    callSelectCity(data){
+        console.log("hejsan  ", data )
+    }
+
     // Fetch seminars only and transform the data to the slides array
     getSeminars() {
         this.slideService.getSeminars()
@@ -33,9 +46,12 @@ export class EventSummaryComponent implements OnInit {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (slide['location'] == 'Växjö') {
+                    if (slide['location'] == this.selectedValue) {
+
                         if (newDate > today) {
-                            this.slides.push(slide);
+                            if (this.slides.length < 4){
+                                this.slides.push(slide);
+                            }
                         }
                     }
 
@@ -61,11 +77,14 @@ export class EventSummaryComponent implements OnInit {
             .subscribe((courses: Slide[]) => {
                 this.courses = [];
                 for (var course of courses) {
+                    console.log(this.selectedValue)
                     let dateString = course['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
                     if (course['courseInformation'].includes('Växjö')) {
-                        this.courses.push(course);
+                        if (this.courses.length < 4){
+                            this.courses.push(course);
+                        }
                     }
 
 

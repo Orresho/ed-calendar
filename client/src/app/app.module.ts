@@ -4,6 +4,7 @@ import { HeaderComponent } from './start/header.component';
 import { StartComponent } from './start/start.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ShareService } from './start/services/share.service';
 
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
@@ -26,7 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
     
   ],
-  providers: [SlideService],
+  providers: [SlideService, ShareService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
