@@ -16,7 +16,7 @@ export class SlideService {
     getSeminars() {
         return this.http.get('http://localhost:3000/event')
             .map((response: Response) => {
-                console.log(response);
+                // console.log(response);
                 return this.slides = response.json().obj;
             })
             .catch((error: Response) => Observable.throw(error.json()));
@@ -25,7 +25,7 @@ export class SlideService {
     getCourses(){
         return this.http.get('http://localhost:3000/course')
             .map((response: Response) => {
-                console.log(response);   
+                // console.log(response);   
                 return this.slides = response.json().obj;
             })
             .catch((error: Response) => Observable.throw(error.json()));

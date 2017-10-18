@@ -31,17 +31,13 @@ export class HeaderComponent implements OnInit {
 
     }
 
-    test(value){
-       // console.log(value)
+    onSelectCity(value){
         this.selectCity.emit(value);
         this.shareService.setCity = value;
     }
 
-    // 
-
     // use form property to access and emit interval value 
     onSubmit(form: NgForm){
-        console.log('Headercomponent: ' + form.value.interval);
         this.onSpeedChange.emit(form.value.interval);
         
     }
@@ -52,8 +48,5 @@ export class HeaderComponent implements OnInit {
         {name: "Lund"},
         {name: "Helsingborg"}
     ];
-    selectedValue = null;
-
-
     
 }

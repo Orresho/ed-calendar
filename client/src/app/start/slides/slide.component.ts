@@ -1,5 +1,5 @@
 import { SlideService } from './slide.service';
-import { Component, OnInit, Input, AfterViewInit, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, EventEmitter, Output } from '@angular/core';
 
 //Import image interface
 import { Slide } from './slide.model';
@@ -14,18 +14,29 @@ export class SlideComponent implements OnInit, OnChanges {
     slides: Slide[];
     @Input() speedes: string;
     @Input() selectedValue: string;
-
+    
     constructor(private slideService: SlideService) { }
-
+    
     ngOnInit() {
-
+        
         // Exec getSeminars
         this.getSeminars();
 
         // Exec getCourses
         this.getCourses();
     }
+    
+    ngOnChanges() {
+        
+        // Refresh on change
+        this.getSeminars();
+        this.getCourses();
 
+        this.refreshCarousel();
+        // console.log(this.speedes);
+    }
+    
+    
     // Get Seminars
     getSeminars() {
        // console.log(this.selectedValue)
@@ -39,7 +50,7 @@ export class SlideComponent implements OnInit, OnChanges {
                     let today = new Date(Date.now());
                     if (slide['location'] == this.selectedValue) {
                         if (newDate > today) {
-                            console.log(this.slides);
+                            // console.log(this.slides);
                                 this.slides.push(slide);
                         }
                     }
@@ -69,9 +80,8 @@ export class SlideComponent implements OnInit, OnChanges {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (slide['courseInformation'].includes('Växjö')) {
-                            
-                            this.slides.push(slide);
+                    if (slide['courseInformation'].includes(this.selectedValue)) {
+                        this.slides.push(slide);
                     }
                     
 
@@ -92,14 +102,13 @@ export class SlideComponent implements OnInit, OnChanges {
             });
     }
 
-    ngOnChanges() {
-        //console.log("change - " + this.speedes)
-        jQuery('#myCarousel').carousel({
+
+    refreshCarousel(){
+        console.log('Changed interval: ' + this.speedes);
+        jQuery('.carousel').carousel({
             interval: this.speedes
         });
-
-        jQuery('#myCarousel').carousel('cycle');
-
-        // console.log(this.speedes);
+        jQuery('carousel').carousel('cycle');
     }
+
 }
