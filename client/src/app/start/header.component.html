@@ -30,14 +30,16 @@
         </div>
     </div>
 
-
-
     <div class="form-group">
             <a for="exampleFormControlSelect1">Example select</a>
             <br>
-            <select [(ngModel)]="selectedValue" (ngModelChange)="test($event)" class="form-control" id="exampleFormControlSelect1">
-              <option *ngFor="let c of citys" [value]="c.name">{{c.name}}</option>    
+            <select 
+                [(ngModel)]="selectedValue" 
+                (ngModelChange)="onSelectCity($event)" 
+                class="form-control" 
+                id="exampleFormControlSelect1">
 
+                <option *ngFor="let c of citys" [value]="c.name">{{c.name}}</option>    
             </select>
             {{selectedValue}}
     </div>

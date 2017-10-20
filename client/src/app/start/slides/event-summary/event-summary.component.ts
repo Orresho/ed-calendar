@@ -1,6 +1,6 @@
 import { Slide } from './../slide.model';
 import { SlideService } from './../slide.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, AfterViewInit } from '@angular/core';
 import { SlideComponent } from '../slide.component';
 import { ShareService } from '../../services/share.service';
 
@@ -9,19 +9,21 @@ import { ShareService } from '../../services/share.service';
     templateUrl: './event-summary.component.html',
     styleUrls: ['./event-summary.component.css']
 })
-export class EventSummaryComponent implements OnInit {
+export class EventSummaryComponent implements OnInit, OnChanges {
     constructor(private slideService: SlideService,
-                public shareService: ShareService ) {
-                    console.log("SHARE ", this.shareService.getCity());
-                 }
+        public shareService: ShareService) {}
 
     @Input() selectedValue: string;
-
 
     slides: Slide[];
     courses: Slide[];
 
-   
+    ngOnChanges(){
+        // this.shareService.currentCity.subscribe(city => this.selectedValue = city);
+        console.log('Event summary - Selected city: ' + this.selectedValue);
+        this.getSeminars();
+        this.getCourses();
+    }
 
     ngOnInit() {
 
@@ -30,12 +32,8 @@ export class EventSummaryComponent implements OnInit {
 
         // Run getCourses
         this.getCourses();
-
     }
 
-    callSelectCity(data){
-        console.log("hejsan  ", data )
-    }
 
     // Fetch seminars only and transform the data to the slides array
     getSeminars() {
@@ -49,7 +47,7 @@ export class EventSummaryComponent implements OnInit {
                     if (slide['location'] == this.selectedValue) {
 
                         if (newDate > today) {
-                            if (this.slides.length < 4){
+                            if (this.slides.length < 4) {
                                 this.slides.push(slide);
                             }
                         }
@@ -81,12 +79,11 @@ export class EventSummaryComponent implements OnInit {
                     let dateString = course['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (course['courseInformation'].includes('Växjö')) {
-                        if (this.courses.length < 4){
+                    if (course['courseInformation'].includes(this.selectedValue)) {
+                        if (this.courses.length < 4) {
                             this.courses.push(course);
                         }
                     }
-
 
                     // Sort by date
                     this.courses.sort((obj1, obj2) => {
@@ -106,6 +103,6 @@ export class EventSummaryComponent implements OnInit {
     }
 
 
-    
+
 
 }
