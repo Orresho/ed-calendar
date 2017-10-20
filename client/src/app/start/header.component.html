@@ -44,12 +44,12 @@
                 <a for="exampleFormControlSelect1"> Select location </a>
                 <br>
                 <select 
+                    name="selectedValue"
                     [(ngModel)]="selectedValue" 
                     (ngModelChange)="onSelectCity($event)" 
                     class="form-control" 
                     id="exampleFormControlSelect1"
-                    style="width:131%;"
-                    >
+                    style="width:131%;">
 
                     <option *ngFor="let c of citys" [value]="c.name">{{c.name}}</option>    
                 </select>

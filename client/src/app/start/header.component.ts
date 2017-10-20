@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
     }
 
     onSelectCity(value){
+        console.log(value);
         this.selectCity.emit(value);
         this.shareService.setCity = value;
     }
