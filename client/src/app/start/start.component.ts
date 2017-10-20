@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class StartComponent {
 
     value:number = 12;
-    speed = 7000; // default value
+    speed = 50000; // default value
     city = 'Växjö'; // default value
 
     changeValue():void {

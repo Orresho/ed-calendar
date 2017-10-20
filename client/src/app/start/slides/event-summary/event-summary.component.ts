@@ -101,8 +101,4 @@ export class EventSummaryComponent implements OnInit, OnChanges {
                 }
             });
     }
-
-
-
-
 }
