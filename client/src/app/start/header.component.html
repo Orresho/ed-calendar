@@ -1,11 +1,13 @@
 <div [style.width.px]="sideWidth" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
 
+<br>
+<br>
 
 
-  <!-- Button for changing interval value -->
-    <div class="row">
-        <div class="center-block">
+<!-- Button for changing interval value -->
+<div class="row">
+    <div class="col-md-12">
         <form (ngSubmit)="onSubmit(f)" #f="ngForm">
             <div class="input-group">
                 <a id="Interval-text">Change interval</a>
@@ -27,37 +29,49 @@
             </div>
             </div>
         </form>
-        </div>
     </div>
-
-    <div class="form-group">
-            <a for="exampleFormControlSelect1">Example select</a>
-            <br>
-            <select 
-                [(ngModel)]="selectedValue" 
-                (ngModelChange)="onSelectCity($event)" 
-                class="form-control" 
-                id="exampleFormControlSelect1">
-
-                <option *ngFor="let c of citys" [value]="c.name">{{c.name}}</option>    
-            </select>
-            {{selectedValue}}
-    </div>
-
-
-
-
-
-
 </div>
 
+<br>
+<br>
+
+<!-- HTML code for dropdownlist -->
+    
+<div class="row">
+    <div class="col-md-12">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="input-group">
+                <a for="exampleFormControlSelect1"> Select location </a>
+                <br>
+                <select 
+                    [(ngModel)]="selectedValue" 
+                    (ngModelChange)="onSelectCity($event)" 
+                    class="form-control" 
+                    id="exampleFormControlSelect1"
+                    style="width:131%;"
+                    >
+
+                    <option *ngFor="let c of citys" [value]="c.name">{{c.name}}</option>    
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+</div>  <!-- put forms inside this div -->
+
+
+
+<!-- HTML for the href img -->
 <div class="header">
     <span style="cursor:pointer" (click)="openNav()">
         <img class="img" src="http://education.hemsida.eu/wp-content/uploads/2015/10/softhouse-education-logo1-300x58.png">
     </span>
 </div>
 
-<!--  ************************************************* -->
+<!--  ********************** Might save for later *************************** -->
 
 
     <!-- Button for changing interval value -->

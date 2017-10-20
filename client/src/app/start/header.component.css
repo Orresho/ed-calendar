@@ -26,14 +26,12 @@ body {
     padding-top: 60px;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+.sidenav a { 
     text-decoration: none;
     font-size: 25px;
     color:white;
     display: block;
     transition: 0.3s;
-    text-align: center;
 }
 
 .sidenav a:hover {
@@ -69,18 +67,22 @@ span{
     
 }
 /*******************************************************/
-.col-lg-3 {
-    width: 100%;
-}
+/* Css for forms in the sidebar */
+/*******************************************************/
+
 .input-group {
-    margin: 0 auto;
+    margin-left: 5%;
+    position: relative;
+    display: table;
+    border-collapse: separate;
 }
 .input-group-btn{
     display: block; 
 }
 .form-control{
-    width: 70%;
+    width: 80%;
 }
+
 
 .btn-primary{
     background-color: #f05a1a;
