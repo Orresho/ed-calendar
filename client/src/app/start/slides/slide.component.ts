@@ -12,7 +12,7 @@ declare var jQuery;
 })
 export class SlideComponent implements OnInit, OnChanges {
     slides: Slide[];
-    @Input() speedes: string;
+    @Input() speed: string;
     @Input() selectedValue: string;
     
     constructor(private slideService: SlideService) { }
@@ -104,9 +104,9 @@ export class SlideComponent implements OnInit, OnChanges {
 
 
     refreshCarousel(){
-        console.log('Changed interval: ' + this.speedes);
+        console.log('Changed interval: ' + this.speed);
         jQuery('.carousel').carousel({
-            interval: this.speedes
+            interval: this.speed
         });
         jQuery('carousel').carousel('cycle');
     }

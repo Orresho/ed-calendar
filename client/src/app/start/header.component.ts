@@ -39,7 +39,6 @@ export class HeaderComponent implements OnInit {
     // use form property to access and emit interval value 
     onSubmit(form: NgForm){
         this.onSpeedChange.emit(form.value.interval);
-        console.log(form.value.interval);
     }
     citys = [
         {name: "Växjö"},
