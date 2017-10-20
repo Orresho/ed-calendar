@@ -6,27 +6,27 @@
     <!-- Button for changing interval value -->
     <div class="row">
         <div class="center-block">
-        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-            <div class="input-group">
-                <a id="Interval-text">Change interval</a>
-                <br>
-            <input 
-                    id="interval"
-                    type="text"
-                    class="form-control"
-                    placeholder="Enter the interval.."
-                    name="interval"
-                    ngModel
-                    required
-                    >
-            <div class="input-group-btn">
-            <button
-                    class="btn btn-primary"
-                    type="submit"
-                    >Commit</button>
-            </div>
-            </div>
-        </form>
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="input-group">
+                    <a id="Interval-text">Change interval</a>
+                    <br>
+                    <input 
+                            id="interval"
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter the interval.."
+                            name="interval"
+                            ngModel
+                            required
+                            >
+                    <div class="input-group-btn">
+                    <button
+                            class="btn btn-primary"
+                            type="submit"
+                            >Commit</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <br>
