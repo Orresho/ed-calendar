@@ -31,6 +31,7 @@ export class SlideComponent implements OnInit, OnChanges {
         // Refresh on change
         this.getSeminars();
         this.getCourses();
+        console.log('Slider - Selected city: ' + this.city);
 
         this.refreshCarousel();
         // console.log(this.speedes);
@@ -105,8 +106,10 @@ export class SlideComponent implements OnInit, OnChanges {
 
     refreshCarousel(){
         console.log('Changed interval: ' + this.speed);
-        $('.carousel').on('.slide.bs.carousel', function(e){});
-        $('carousel').carousel('cycle');
+        $('.carousel').carousel({
+            interval: this.speed
+        })
+        $('.carousel').carousel('cycle');
         
     }
 
