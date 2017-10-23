@@ -13,14 +13,14 @@ export class EventSummaryComponent implements OnInit, OnChanges {
     constructor(private slideService: SlideService,
         public shareService: ShareService) {}
 
-    @Input() selectedValue: string;
+    @Input() city: string;
 
     slides: Slide[];
     courses: Slide[];
 
     ngOnChanges(){
         // this.shareService.currentCity.subscribe(city => this.selectedValue = city);
-        console.log('Event summary - Selected city: ' + this.selectedValue);
+        console.log('Event summary - Selected city: ' + this.city);
         this.getSeminars();
         this.getCourses();
     }
@@ -44,7 +44,7 @@ export class EventSummaryComponent implements OnInit, OnChanges {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (slide['location'] == this.selectedValue) {
+                    if (slide['location'] == this.city) {
 
                         if (newDate > today) {
                             if (this.slides.length < 4) {
@@ -75,11 +75,11 @@ export class EventSummaryComponent implements OnInit, OnChanges {
             .subscribe((courses: Slide[]) => {
                 this.courses = [];
                 for (var course of courses) {
-                    console.log(this.selectedValue)
+                    console.log(this.city)
                     let dateString = course['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (course['courseInformation'].includes(this.selectedValue)) {
+                    if (course['courseInformation'].includes(this.city)) {
                         if (this.courses.length < 4) {
                             this.courses.push(course);
                         }
