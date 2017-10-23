@@ -10,7 +10,8 @@ import { ShareService } from '../../services/share.service';
     styleUrls: ['./event-summary.component.css']
 })
 export class EventSummaryComponent implements OnInit, OnChanges {
-    constructor(private slideService: SlideService,
+    constructor(
+        private slideService: SlideService,
         public shareService: ShareService) {}
 
     @Input() city: string;
