@@ -3,7 +3,7 @@ import { Component, OnInit, Input, OnChanges, EventEmitter, Output } from '@angu
 
 //Import image interface
 import { Slide } from './slide.model';
-declare var jQuery;
+declare var $;
 
 @Component({
     selector: 'app-slide',
@@ -12,8 +12,8 @@ declare var jQuery;
 })
 export class SlideComponent implements OnInit, OnChanges {
     slides: Slide[];
-    @Input() speedes: string;
-    @Input() selectedValue: string;
+    @Input() speed: string;
+    @Input() city: string;
     
     constructor(private slideService: SlideService) { }
     
@@ -31,6 +31,7 @@ export class SlideComponent implements OnInit, OnChanges {
         // Refresh on change
         this.getSeminars();
         this.getCourses();
+        console.log('Slider - Selected city: ' + this.city);
 
         this.refreshCarousel();
         // console.log(this.speedes);
@@ -48,7 +49,7 @@ export class SlideComponent implements OnInit, OnChanges {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (slide['location'] == this.selectedValue) {
+                    if (slide['location'] == this.city) {
                         if (newDate > today) {
                             // console.log(this.slides);
                                 this.slides.push(slide);
@@ -80,7 +81,7 @@ export class SlideComponent implements OnInit, OnChanges {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (slide['courseInformation'].includes(this.selectedValue)) {
+                    if (slide['courseInformation'].includes(this.city)) {
                         this.slides.push(slide);
                     }
                     
@@ -104,11 +105,12 @@ export class SlideComponent implements OnInit, OnChanges {
 
 
     refreshCarousel(){
-        console.log('Changed interval: ' + this.speedes);
-        jQuery('.carousel').carousel({
-            interval: this.speedes
-        });
-        jQuery('carousel').carousel('cycle');
+        console.log('Changed interval: ' + this.speed);
+        $('.carousel').carousel({
+            interval: this.speed
+        })
+        $('.carousel').carousel('cycle');
+        
     }
 
 }

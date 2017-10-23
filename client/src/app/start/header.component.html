@@ -1,45 +1,41 @@
 <div [style.width.px]="sideWidth" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <br>
+    <br>
 
-<br>
-<br>
-
-
-<!-- Button for changing interval value -->
-<div class="row">
-    <div class="col-md-12">
-        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-            <div class="input-group">
-                <a id="Interval-text">Change interval</a>
-                <br>
-            <input 
-                    id="interval"
-                    type="text"
-                    class="form-control"
-                    placeholder="Enter the interval.."
-                    name="interval"
-                    ngModel
-                    required
-                    >
-            <div class="input-group-btn">
-            <button
-                    class="btn btn-primary"
-                    type="submit"
-                    >Commit</button>
-            </div>
-            </div>
-        </form>
+    <!-- Button for changing interval value -->
+    <div class="row">
+        <div class="center-block">
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="input-group">
+                    <a id="Interval-text">Change interval</a>
+                    <br>
+                    <input 
+                            id="interval"
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter the interval.."
+                            name="interval"
+                            ngModel
+                            required
+                            >
+                    <div class="input-group-btn">
+                    <button
+                            class="btn btn-primary"
+                            type="submit"
+                            >Commit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
+    <br>
+    <br>
 
-<br>
-<br>
-
-<!-- HTML code for dropdownlist -->
-    
-<div class="row">
-    <div class="col-md-12">
-        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <!-- HTML code for dropdownlist -->
+        
+    <div class="row">
+        <div class="col-md-12">
             <div class="input-group">
                 <a for="exampleFormControlSelect1"> Select location </a>
                 <br>
@@ -54,12 +50,8 @@
                     <option *ngFor="let c of citys" [value]="c.name">{{c.name}}</option>    
                 </select>
             </div>
-        </form>
+        </div>
     </div>
-</div>
-
-
-
 </div>  <!-- put forms inside this div -->
 
 
@@ -71,34 +63,4 @@
     </span>
 </div>
 
-<!--  ********************** Might save for later *************************** -->
-
-
-    <!-- Button for changing interval value -->
-    <!-- <form [formGroup]="intervalForm" (ngSubmit)="onSubmit()">
-        <label for="interval">Interval</label>
-        <input 
-                type="text"
-                class="form-control"
-                placeholder="Enter value"
-                formControlName="intervalSpeed"
-                 >
-        <span class="input-group-btn">
-        <button
-                class="btn btn-secondary"
-                type="submit"
-                [disabled]="!intervalForm.valid">Apply</button>
-        </span>
-    </form> -->
-
-
-    <!--<a>Change interval</a>
-    <br />
-
-    <div class="form-group-test">
-        <button>&#x25B2;</button><br>
-        <label class="number" for="email">100</label><br>
-        <button>&#x25BC;</button>
-    </div>
--->
 

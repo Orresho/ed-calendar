@@ -13,10 +13,10 @@ export class HeaderComponent implements OnInit {
 
     }
     @Output() onSpeedChange = new EventEmitter<number>();
+    @Output() selectCity = new EventEmitter<String>();
+    
     @Input() time:number;
     @ViewChild('sidenav') sidenav: any;
-
-    @Output() selectCity = new EventEmitter<String>();
 
     sideWidth:any = 0;
     openNav(event) {
@@ -32,7 +32,6 @@ export class HeaderComponent implements OnInit {
     }
 
     onSelectCity(value){
-        console.log(value);
         this.selectCity.emit(value);
         this.shareService.setCity = value;
     }
@@ -40,7 +39,6 @@ export class HeaderComponent implements OnInit {
     // use form property to access and emit interval value 
     onSubmit(form: NgForm){
         this.onSpeedChange.emit(form.value.interval);
-        
     }
     citys = [
         {name: "Växjö"},
