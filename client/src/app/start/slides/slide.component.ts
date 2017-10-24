@@ -35,6 +35,7 @@ export class SlideComponent implements OnInit, OnChanges {
         localStorage.setItem("speed",this.speed);
         this.refreshCarousel();
         // console.log(this.speedes);
+       
     }
     
     
@@ -45,6 +46,8 @@ export class SlideComponent implements OnInit, OnChanges {
         this.slideService.getSeminars()
             .subscribe((slides: Slide[]) => {
                 var city = localStorage.getItem("city");
+                if(city =='null')
+                    city = 'Växjö'
                 this.slides = [];
                 for (var slide of slides) {
                     let dateString = slide['numericDate'];
@@ -79,6 +82,8 @@ export class SlideComponent implements OnInit, OnChanges {
         this.slideService.getCourses()
             .subscribe((slides: Slide[]) => {
                 var city = localStorage.getItem("city");
+                if(city =='null')
+                    city = 'Växjö'
                 for (var slide of slides) {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
@@ -108,9 +113,14 @@ export class SlideComponent implements OnInit, OnChanges {
 
     refreshCarousel(){
         var snabb = localStorage.getItem("speed");
+        console.log(snabb);
+        if (snabb == 'null'){
+            snabb = '60000';
+        }
         console.log('Changed interval: ' + this.speed);
         console.log(typeof snabb)
         $('.carousel').carousel({
+            
             interval: snabb
         })
         $('.carousel').carousel('cycle');

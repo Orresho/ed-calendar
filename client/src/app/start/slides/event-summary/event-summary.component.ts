@@ -22,7 +22,7 @@ export class EventSummaryComponent implements OnInit, OnChanges {
     ngOnChanges(){
         // this.shareService.currentCity.subscribe(city => this.selectedValue = city);
         localStorage.setItem("city",this.city);
-       
+        
         
 
         this.getSeminars();
@@ -43,6 +43,8 @@ export class EventSummaryComponent implements OnInit, OnChanges {
         this.slideService.getSeminars()
             .subscribe((slides: Slide[]) => {
                 var city = localStorage.getItem("city");
+                if(city =='null')
+                    city = 'Växjö'
                 this.slides = [];                
                 for (var slide of slides) {
                     let dateString = slide['numericDate'];
@@ -79,6 +81,8 @@ export class EventSummaryComponent implements OnInit, OnChanges {
         this.slideService.getCourses()
             .subscribe((courses: Slide[]) => {
                 var city = localStorage.getItem("city");
+                if(city =='null')
+                    city = 'Växjö'
                 this.courses = [];
                 for (var course of courses) {
                     console.log(this.city)
