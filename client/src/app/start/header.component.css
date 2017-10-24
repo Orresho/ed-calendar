@@ -71,7 +71,7 @@ span{
 /*******************************************************/
 
 .input-group {
-    margin-left: 5%;
+    margin-left: 4%;
     position: relative;
     display: table;
     border-collapse: separate;
@@ -95,3 +95,4 @@ span{
 #interval{
     border-radius: 4%;
 }
+

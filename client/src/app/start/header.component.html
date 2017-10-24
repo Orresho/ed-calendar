@@ -5,7 +5,8 @@
 
     <!-- Button for changing interval value -->
     <div class="row">
-        <div class="center-block">
+        <div class="col-md-12">
+         <div class="center-block">
             <form (ngSubmit)="onSubmit(f)" #f="ngForm">
                 <div class="input-group">
                     <a id="Interval-text">Change interval</a>
@@ -20,13 +21,15 @@
                             required
                             >
                     <div class="input-group-btn">
-                    <button
+                    <button 
+                            onclick="window.location.reload()"
                             class="btn btn-primary"
                             type="submit"
                             >Commit</button>
                     </div>
                 </div>
             </form>
+        </div>
         </div>
     </div>
     <br>
@@ -45,7 +48,7 @@
                     (ngModelChange)="onSelectCity($event)" 
                     class="form-control" 
                     id="exampleFormControlSelect1"
-                    style="width:131%;">
+                    style="width:100%;">
 
                     <option *ngFor="let c of citys" [value]="c.name">{{c.name}}</option>    
                 </select>
