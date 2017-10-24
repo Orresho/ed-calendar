@@ -21,13 +21,15 @@ export class EventSummaryComponent implements OnInit, OnChanges {
 
     ngOnChanges(){
         // this.shareService.currentCity.subscribe(city => this.selectedValue = city);
-        console.log('Event summary - Selected city: ' + this.city);
+        localStorage.setItem("city",this.city);
+       
+        
+
         this.getSeminars();
         this.getCourses();
     }
 
     ngOnInit() {
-
         // Run getSeminars
         this.getSeminars();
 
@@ -40,12 +42,13 @@ export class EventSummaryComponent implements OnInit, OnChanges {
     getSeminars() {
         this.slideService.getSeminars()
             .subscribe((slides: Slide[]) => {
-                this.slides = [];
+                var city = localStorage.getItem("city");
+                this.slides = [];                
                 for (var slide of slides) {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (slide['location'] == this.city) {
+                    if (slide['location'] ==  city) {
 
                         if (newDate > today) {
                             if (this.slides.length < 4) {
@@ -68,19 +71,21 @@ export class EventSummaryComponent implements OnInit, OnChanges {
                     });
                 }
             });
+           
     }
 
     // Fetch courses only and transform the data to the courses array
     getCourses() {
         this.slideService.getCourses()
             .subscribe((courses: Slide[]) => {
+                var city = localStorage.getItem("city");
                 this.courses = [];
                 for (var course of courses) {
                     console.log(this.city)
                     let dateString = course['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
-                    if (course['courseInformation'].includes(this.city)) {
+                    if (course['courseInformation'].includes(city)) {
                         if (this.courses.length < 4) {
                             this.courses.push(course);
                         }

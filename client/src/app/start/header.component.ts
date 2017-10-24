@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
 
     sideWidth:any = 0;
     openNav(event) {
-        this.sideWidth = 350;
+        this.sideWidth = 270;
     }
     closeNav() {
         this.sideWidth = 0;
