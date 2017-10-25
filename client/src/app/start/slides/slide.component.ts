@@ -12,13 +12,12 @@ declare var $;
 })
 export class SlideComponent implements OnInit, OnChanges {
     slides: Slide[];
-    @Input() speed: string;
+    @Input() time: string;
     @Input() city: string;
     
     constructor(private slideService: SlideService) { }
     
     ngOnInit() {
-        localStorage.getItem("speed");
         // Exec getSeminars
         this.getSeminars();
 
@@ -32,10 +31,9 @@ export class SlideComponent implements OnInit, OnChanges {
         this.getSeminars();
         this.getCourses();
         console.log('Slider - Selected city: ' + this.city);
-        localStorage.setItem("speed",this.speed);
+        localStorage.setItem("speed",this.time);
         this.refreshCarousel();
         // console.log(this.speedes);
-       
     }
     
     
@@ -46,8 +44,10 @@ export class SlideComponent implements OnInit, OnChanges {
         this.slideService.getSeminars()
             .subscribe((slides: Slide[]) => {
                 var city = localStorage.getItem("city");
-                if(city =='null')
-                    city = 'Växjö'
+                if (city =='null')
+                {
+                    city = "Växjö"
+                }
                 this.slides = [];
                 for (var slide of slides) {
                     let dateString = slide['numericDate'];
@@ -82,14 +82,19 @@ export class SlideComponent implements OnInit, OnChanges {
         this.slideService.getCourses()
             .subscribe((slides: Slide[]) => {
                 var city = localStorage.getItem("city");
-                if(city =='null')
-                    city = 'Växjö'
+                if (city =='null')
+                {
+                    city = "Växjö"
+                }
                 for (var slide of slides) {
                     let dateString = slide['numericDate'];
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
                     if (slide['courseInformation'].includes(city)) {
+                        if (newDate > today)
+                        {
                         this.slides.push(slide);
+                        }
                     }
                     
 
@@ -112,16 +117,14 @@ export class SlideComponent implements OnInit, OnChanges {
 
 
     refreshCarousel(){
-        var snabb = localStorage.getItem("speed");
-        console.log(snabb);
-        if (snabb == 'null'){
-            snabb = '60000';
+        var tid = localStorage.getItem("speed");
+        console.log('Changed interval: ' + this.time);
+        console.log(typeof tid)
+        if (tid == 'null'){
+            tid = '60000';
         }
-        console.log('Changed interval: ' + this.speed);
-        console.log(typeof snabb)
         $('.carousel').carousel({
-            
-            interval: snabb
+            interval: tid
         })
         $('.carousel').carousel('cycle');
         
