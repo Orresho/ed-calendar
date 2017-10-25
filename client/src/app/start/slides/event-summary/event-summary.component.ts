@@ -51,9 +51,8 @@ export class EventSummaryComponent implements OnInit, OnChanges {
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
                     if (slide['location'] ==  city) {
-
                         if (newDate > today) {
-                            if (this.slides.length < 4) {
+                            if (this.slides.length < 6) {
                                 this.slides.push(slide);
                             }
                         }
@@ -90,8 +89,10 @@ export class EventSummaryComponent implements OnInit, OnChanges {
                     let newDate = new Date(dateString);
                     let today = new Date(Date.now());
                     if (course['courseInformation'].includes(city)) {
-                        if (this.courses.length < 4) {
-                            this.courses.push(course);
+                        if (newDate > today) {
+                            if (this.courses.length < 6) {
+                                this.courses.push(course);
+                            }
                         }
                     }
 

@@ -4,37 +4,25 @@
     <br>
 
     <!-- Button for changing interval value -->
+  
     <div class="row">
         <div class="col-md-12">
-         <div class="center-block">
-            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-                <div class="input-group">
-                    <a id="Interval-text">Change interval</a>
-                    <br>
-                    <input 
-                            id="interval"
-                            type="text"
-                            class="form-control"
-                            placeholder="Enter the interval.."
-                            name="interval"
-                            ngModel
-                            required
-                            >
-                    <div class="input-group-btn">
-                    <button 
-                            onclick="window.location.reload()"
-                            class="btn btn-primary"
-                            type="submit"
-                            >Commit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+            <div class="input-group">
+                <a for="exampleFormControlSelect1"> Change interval </a>
+                <br>
+                <select 
+                    name="selectedValue"
+                    [(ngModel)]="selectedValue" 
+                    (ngModelChange)="onSelectTime($event)" 
+                    class="form-control" 
+                    id="exampleFormControlSelect1"
+                    style="width:100%;">
+
+                    <option *ngFor="let t of timer" [value]="t.period">{{t.time}}</option>    
+                </select>
+            </div>
         </div>
     </div>
-    <br>
-    <br>
-
     <!-- HTML code for dropdownlist -->
         
     <div class="row">
@@ -55,6 +43,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
 </div>  <!-- put forms inside this div -->
 
 

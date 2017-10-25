@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class StartComponent {
 
     value:number = 12;
-    speed = localStorage.getItem("speed"); // default value
+    time = localStorage.getItem("speed"); // default value
     city = localStorage.getItem("city");
 
     
@@ -21,9 +21,9 @@ export class StartComponent {
     }
 
     // We recieve the speed interval value from onSpeedChange and pass it to global speed which is then bound to the global slide property "speedes" in the slide.component.ts file.
-    speedChangeValue(speed):void {
-        console.log("changes in parent: "+ speed)
-        this.speed = speed;
+    changedTime(time):void {
+        console.log("changes in parent: "+ time)
+        this.time= time;
     }
 
     changedCity(city: string){

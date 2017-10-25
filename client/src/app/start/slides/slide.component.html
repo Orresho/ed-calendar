@@ -27,8 +27,13 @@
                                     <!-- Left column with the event -->
                                     <div class="col-md-12 eventImage">
                                         <div class="col-md-12" *ngIf="slide.imageUrl != ''">
-                                            <div class="col-md-12">                                           
-                                                <img src="{{slide.imageUrl}}" class="img-event" style="max-height:700px;">
+                                            <div class="col-md-12">
+                                                <div *ngIf="slide.imageUrl == ''">
+                                                    <img src="http://www.softhouse.se/wp-content/uploads/2014/09/softhouse_logotyp.png" class="img-event">
+                                                </div>
+                                                <div *ngIf="slide.imageUrl != ''">
+                                                    <img src="{{slide.imageUrl}}" class="img-event" style="max-height:700px;">
+                                                </div>
                                                 <!-- img for the event -->
                                             </div>
                                         </div>

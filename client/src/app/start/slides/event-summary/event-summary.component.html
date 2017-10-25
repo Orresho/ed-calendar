@@ -7,7 +7,12 @@
           <li data-target="#myCarousel" data-slide-to="i+1" *ngFor="let slide of slides">
             <div class="col-md-2">
               <div class="info-event">
-                <img src="{{slide.imageUrl}}" class="img-event">
+                  <div *ngIf="slide.imageUrl == ''">
+                      <img src="http://www.softhouse.se/wp-content/uploads/2014/09/softhouse_logotyp.png" class="img-event">
+                  </div>
+                  <div *ngIf="slide.imageUrl != ''">
+                      <img src="{{slide.imageUrl}}" class="img-event" style="max-height:700px;">
+                  </div>
                 <!-- img for the event -->
                 <span>{{slide.title}}</span>
                 <br> {{slide.location}} {{slide.date}}
