@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event>
+        <title>Scrum för Team </title>
+        <description>
+        Vad ni lär er:
+        -Scrum Ramverket - Regler och roller enligt Scrum Guide.
+        -Scrum Teori och Principer - En djup förståelse av Scrum-teorin, hur det baseras på empirisk teori samt värderingar och principer.
+        -Kross-funktionella, själv-organiserande Team - Den naturliga drivkraften hos ett tvärfunktionellt och självorganiserande team främjar flexibilitet, kreativitet och produktivitet. Teamet väljer själv hur man bäst utför arbetet och har alla kompetenser som behövs för att uppnå leveransmålet utan att vara beroende av andra utanför teamet.
+        -Scrum simulering - Skapa produkt backlog
+        -Scrum simulering - Sprintplanering, utveckling, retrospektiv
+        Förbättringsarbete i teamet
+        Klart (Definition of Done) + Kvalitet 
+        Att kombinera nyutveckling och underhåll i samma team
+        -Scrum rollerna (Utvecklingsteam, Scrum Master, Produktägare)
+        Teamdynamik + teamutveckling - koppling till Scrum-aktiviteter
+        </description>
+        <imageUrl></imageUrl>
+        <courseInformation>
+        Kursen är 2 dagar (9:00 - 17:00) och kan hållas i Softhouse lokaler i Växjö eller annan föredragen plats. 
+        Frukost, lunch och eftermiddagsfika båda dagarna är inkluderat.
+        </courseInformation>
+        <contactInfo>
+            <courseContactName>Mattias Åhlander</courseContactName>
+            <contactPhone>070 3090149</contactPhone>
+            <contactEmail>mattias.ahlander@softhouse.se</contactEmail>
+            <contactImage>http://softhouseeducation.se/wp-content/uploads/2017/01/mattiasåhlander.jpg</contactImage>
+        </contactInfo>
+        <date>2030-12-31T23:59:59</date>
+    </event>
+ <event>
+        <title>Produktägare i Scrum</title>
+        <description>
+        Vad ni lär er:
+
+        Scrum Ramverket - Regler och roller enligt Scrum Guide. 
+        Scrum Teori och Principer - En djup förståelse av Scrum-teorin, hur det baseras på empirisk teori samt värderingar och principer. Varför fungerar scrum och när är det tänkt att användas.
+        Skapa engagemang via en Produktvision
+        Skapa och hantera en Produkt backlog
+        User Stories och nedbrytning av krav
+        Prioritering, visualisera prognoser och planering av releaser
+        Värdera och estimera funktioner och kvaliteter
+        Hur Produktägaren kommunicerar och samarbetar med intressenter, utvecklarna i Scrum Teamet och Scrum Mastern.
+        Samla på dig praktiska tips och verktyg
+        </description>
+        <imageUrl></imageUrl>
+        <courseInformation>
+        Kursen är 2 dagar (9:00 - 17:00) och kan hållas i Softhouse lokaler i Växjö eller annan föredragen plats. 
+        Frukost, lunch och eftermiddagsfika båda dagarna är inkluderat.</courseInformation>
+        <contactInfo>
+            <courseContactName>
+            Mattias Åhlander
+            </courseContactName>
+            <contactPhone>070 3090149</contactPhone>
+            <contactEmail>mattias.ahlander@softhouse.se</contactEmail>
+            <contactImage>http://softhouseeducation.se/wp-content/uploads/2017/01/mattiasåhlander.jpg</contactImage>
+        </contactInfo>
+        <date>2030-12-31T23:59:59</date>
+    </event>
+</events>
+        
