@@ -1,6 +1,5 @@
 import { NgForm } from '@angular/forms';
 import { Component, ViewChild, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { ShareService } from './services/share.service';
 
 @Component({
     selector: 'app-header',
@@ -9,13 +8,19 @@ import { ShareService } from './services/share.service';
 })
 
 export class HeaderComponent implements OnInit {
-    constructor(public shareService: ShareService) {
-
+    constructor() {}
+    
+    @Input() city: string;
+    @Input() time: string;
+    
+    // intervall speed value changed on input.
+    ngOnInit(){
+        
     }
+
     @Output() selectTime = new EventEmitter<string>();
     @Output() selectCity = new EventEmitter<String>();
     
-    @Input() time:number;
     @ViewChild('sidenav') sidenav: any;
 
     sideWidth:any = 0;
@@ -26,18 +31,12 @@ export class HeaderComponent implements OnInit {
         this.sideWidth = 0;
     }
 
-    // intervall speed value changed on input.
-    ngOnInit(){
-
-    }
     onSelectTime(value){
         this.selectTime.emit(value);
-        this.shareService.setTime = value;
         window.location.reload();
     }
     onSelectCity(value){
         this.selectCity.emit(value);
-        this.shareService.setCity = value;
         window.location.reload();
     }
 

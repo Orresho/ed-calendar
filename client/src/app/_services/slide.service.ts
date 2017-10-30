@@ -1,11 +1,12 @@
 // import { Course } from './course.model';
-import { Slide } from './slide.model';
+import { Slide } from '../_models/slide.model';
 
 import { Injectable } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import 'rxjs/Rx';
 import { Observable } from "rxjs";
-import { Course } from "./course.model";
+import { Course } from "../_models/course.model";
+
 @Injectable()
 export class SlideService {
     constructor(private http: Http) { }
