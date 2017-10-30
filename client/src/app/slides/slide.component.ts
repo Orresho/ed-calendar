@@ -1,8 +1,8 @@
-import { SlideService } from './slide.service';
+import { SlideService } from '../_services/slide.service';
 import { Component, OnInit, Input, OnChanges, EventEmitter, Output } from '@angular/core';
 
 //Import image interface
-import { Slide } from './slide.model';
+import { Slide } from '../_models/slide.model';
 declare var $;
 
 @Component({
@@ -129,5 +129,4 @@ export class SlideComponent implements OnInit, OnChanges {
         $('.carousel').carousel('cycle');
         
     }
-
 }

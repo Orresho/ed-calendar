@@ -11,9 +11,9 @@
                 <a for="exampleFormControlSelect1"> Change interval </a>
                 <br>
                 <select 
-                    name="selectedValue"
-                    [(ngModel)]="selectedValue" 
-                    (ngModelChange)="onSelectTime($event)" 
+                    name="time"
+                    [(ngModel)]="time" 
+                    (ngModelChange)="time"
                     class="form-control" 
                     id="exampleFormControlSelect1"
                     style="width:100%;">
@@ -31,8 +31,8 @@
                 <a for="exampleFormControlSelect1"> Select location </a>
                 <br>
                 <select 
-                    name="selectedValue"
-                    [(ngModel)]="selectedValue" 
+                    name="city"
+                    [(ngModel)]="city" 
                     (ngModelChange)="onSelectCity($event)" 
                     class="form-control" 
                     id="exampleFormControlSelect1"

@@ -1,8 +1,7 @@
-import { Slide } from './../slide.model';
-import { SlideService } from './../slide.service';
+import { Slide } from '../_models/slide.model';
+import { SlideService } from '../_services/slide.service';
 import { Component, OnInit, Input, OnChanges, AfterViewInit } from '@angular/core';
-import { SlideComponent } from '../slide.component';
-import { ShareService } from '../../services/share.service';
+import { SlideComponent } from '../slides/slide.component';
 
 @Component({
     selector: 'app-event-summary',
@@ -11,8 +10,7 @@ import { ShareService } from '../../services/share.service';
 })
 export class EventSummaryComponent implements OnInit, OnChanges {
     constructor(
-        private slideService: SlideService,
-        public shareService: ShareService) {}
+        private slideService: SlideService) {}
 
     @Input() city: string;
 
@@ -22,8 +20,6 @@ export class EventSummaryComponent implements OnInit, OnChanges {
     ngOnChanges(){
         // this.shareService.currentCity.subscribe(city => this.selectedValue = city);
         localStorage.setItem("city",this.city);
-        
-        
 
         this.getSeminars();
         this.getCourses();

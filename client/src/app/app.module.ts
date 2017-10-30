@@ -1,14 +1,13 @@
-import { SlideService } from './start/slides/slide.service';
-import { SlideComponent } from './start/slides/slide.component';
-import { HeaderComponent } from './start/header.component';
-import { StartComponent } from './start/start.component';
+import { SlideService } from './_services/slide.service';
+import { SlideComponent } from './slides/slide.component';
+import { HeaderComponent } from './header/header.component';
+import { StartComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ShareService } from './start/services/share.service';
 
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
-import { EventSummaryComponent } from './start/slides/event-summary/event-summary.component';
+import { EventSummaryComponent } from './event-summary/event-summary.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -27,7 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
     
   ],
-  providers: [SlideService, ShareService],
+  providers: [SlideService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

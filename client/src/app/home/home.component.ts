@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-start',
-    templateUrl: 'start.component.html',
-    styleUrls: ['start.components.css']
+    selector: 'app-home',
+    templateUrl: 'home.component.html',
+    styleUrls: ['home.components.css']
 })
 
 export class StartComponent {
@@ -12,10 +12,7 @@ export class StartComponent {
     time = localStorage.getItem("speed"); // default value
     city = localStorage.getItem("city");
 
-    
-
-     // default value
-
+    // default value
     changeValue():void {
         this.value += 1;
     }

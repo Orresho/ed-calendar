@@ -1,4 +1,4 @@
-import { SlideService } from './start/slides/slide.service';
+import { SlideService } from './_services/slide.service';
 import { Component } from '@angular/core';
 
 @Component({
