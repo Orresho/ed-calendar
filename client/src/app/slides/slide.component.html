@@ -17,185 +17,19 @@
 
                     <!-- COURSE SECTION-->
                     <div *ngIf="slide.type != 'seminar'">
-                    <div class="col-md-11">
-                            <h1 class="eventHeader">{{slide.title}}</h1>
-                            <!-- header for the seminare (svengelska) -->
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="col-md-8 margin-left">
-                                    <!-- Left column with the event -->
-                                    <div class="col-md-12 eventImage">
-                                        <div class="col-md-12" *ngIf="slide.imageUrl != ''">
-                                            <div class="col-md-12">
-                                                <div *ngIf="slide.imageUrl == ''">
-                                                    <img src="http://www.softhouse.se/wp-content/uploads/2014/09/softhouse_logotyp.png" class="img-event">
-                                                </div>
-                                                <div *ngIf="slide.imageUrl != ''">
-                                                    <img src="{{slide.imageUrl}}" class="img-event" style="max-height:700px;">
-                                                </div>
-                                                <!-- img for the event -->
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" class="event-description">
-                                            <div *ngIf="slide.imageUrl == ''">
-                                                <span class="speakerheader">Kursinformation</span>
-                                            </div>
-                                            <br>
-                                            <!-- limits the lenght of the description -->
-                                            <p id="test" class="crop-course">{{slide.description}}</p>
-                                            <br> För mer information, besök
-                                            <span> softhouseeducation.se/kommande-kurser</span>
-                                            <!-- Description for the event -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end left column -->
-                                <div class="col-md-4 margin-right">
-                                    <!-- The right column with information and the speaker -->
-                                    <div class="col-md-12">
-                                    </div>
-                                    <div class="col-md-12 speaker-information">
-                                        <!-- Description about the speaker -->
-                                        <span class="speakerheader">Information</span>
-                                        <br>
-                                        
-                                        <p>{{slide.courseInformation}}</p>
-                                    </div>
-                                    <div class="col-md-12 speaker">
-                                            <span>{{slide.courseContactName}}
-                                                <br>
-                                            </span>
-                                            <!-- Name of the contactperson -->
-                                        </div>
-                                    <div *ngIf="slide.contactImageUrl != ''">
-                                        <div class="col-md-12">
-                                        
-                                            <div class="col-md-3"></div>
-                                            <div class="col-md-6 img-position">
-                                                <img class="img" src="{{slide.contactImageUrl}}">
-                                                <!-- image of the contactperson -->
-                                            </div>
-                                            <div class="col-md-3"></div>
-                                           
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 contact-information">
-                                        <br>
-                                        <div *ngIf="slide.contactEmail != ''|| slide.contactPhone != '' ">
-                                            <p>
-                                                <span>Kontaktuppgifter</span>
-                                            </p>
-                                        </div>
-                                        <div *ngIf="slide.contactEmail != ''">
-                                            <p>&#9993; {{slide.contactEmail}}</p>
-                                        </div>
-                                        <div *ngIf="slide.contactPhone != ''">
-                                            <p>&#x2706; {{slide.contactPhone}}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end right column -->
-                            </div>
-                        </div>
+                        <app-courses [slide]="slide">
+
+                        </app-courses>
+                
                     </div>
 
 
                     <!-- SEMINAR SECTION -->
                     <div *ngIf="slide.type == 'seminar'">
-                        <!-- SEMINAR SECTION -->
-                        <div class="col-md-11">
-                            <h1 class="eventHeader">{{slide.title}}</h1>
-                            <!-- header for the seminare (svengelska) -->
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="col-md-8 margin-left">
-                                    <!-- Left column with the event -->
-                                    <div class="col-md-12 eventImage">
-                                        <div class="col-md-12">
-                                            <div class="col-md-8">
-                                                <img src="{{slide.imageUrl}}" class="img-event" style="width:100%;">
-                                                <!-- img for the event -->
-                                            </div>
-                                            <div class="col-md-4 information">
-                                                <!-- Information about the event is presented -->
-                                                <span class="information-highlight">INFORMATION</span>
-                                                <br>
-                                                <span class="highlight">Pris: </span>{{slide.price}}
-                                                <!-- Price -->
-                                                <br>
-                                                <span class="highlight">Språk: </span>{{slide.language}}
-                                                <!-- Language -->
-                                                <br>
-                                                <span class="highlight">Datum: </span>{{slide.date}}
-                                                <!-- Date -->
-                                                <br>
-                                                <span class="highlight">Plats: </span>{{slide.location}}
-                                                <!-- Place / Adress -->
-                                                <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" class="event-description">
-                                            <br>
-                                            <b>{{slide.subHeading}}</b>
-                                            <!-- header for the event description -->
-                                            <br>
-                                            <br>
-                                            <!-- limits the lenght of the description -->
-                                            <p id="test" class="crop">{{slide.description}}</p>
-                                            <br> För mer information, besök
-                                            <span> softhouseeducation.se/kommande-seminarier</span>
-                                            <!-- Description for the event -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end left column -->
-                                <div class="col-md-4 margin-right">
-                                    <!-- The right column with information and the speaker -->
-                                    <div class="col-md-12">
-                                    </div>
-                                    <div class="col-md-12 speaker-information">
-                                        <!-- Description about the speaker -->
-                                        <span class="speakerheader">Föreläsare</span>
-                                        <br>
-                                        <span class="speaker">{{slide.speakerFullName}}</span>
-                                        <p>{{slide.speakerDescription}}</p>
-                                    </div>
-                                    <div class="col-md-12 speaker">
-                                        <span>{{slide.contactPerson}}
-                                            <br>
-                                        </span>
-                                        <!-- Name of the contactperson -->
-                                    </div>
-                                    <div *ngIf="slide.contactImageUrl != ''">
-                                        <div class="col-md-12">
-                                            <div class="col-md-3"></div>
-                                            <div class="col-md-6 img-position">
-                                                <img class="img" src="{{slide.contactImageUrl}}">
-                                                <!-- image of the contactperson -->
-                                            </div>
-                                            <div class="col-md-3"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 contact-information">
-                                        <br>
-                                        <div *ngIf="slide.contactEmail != ''|| slide.contactPhone != '' ">
-                                            <p>
-                                                <span>Kontaktuppgifter</span>
-                                            </p>
-                                        </div>
-                                        <div *ngIf="slide.contactEmail != ''">
-                                            <p>&#9993; {{slide.contactEmail}}</p>
-                                        </div>
-                                        <div *ngIf="slide.contactPhone != ''">
-                                            <p>&#x2706; {{slide.contactPhone}}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end right column -->
-                            </div>
-                        </div>
+                        <app-seminars [slide]="slide">
+                            
+                        </app-seminars>
+   
                     </div>
 
                 </div>
