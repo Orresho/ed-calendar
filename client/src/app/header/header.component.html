@@ -13,7 +13,7 @@
                 <select 
                     name="time"
                     [(ngModel)]="time" 
-                    (ngModelChange)="time"
+                    (ngModelChange)="onSelectTime($event)"
                     class="form-control" 
                     id="exampleFormControlSelect1"
                     style="width:100%;">
