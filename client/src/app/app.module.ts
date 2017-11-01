@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { EventSummaryComponent } from './event-summary/event-summary.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SeminarsComponent } from './slides/seminars/seminars.component';
+import { CoursesComponent } from './slides/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StartComponent,
     HeaderComponent,
     SlideComponent,
-    EventSummaryComponent
+    EventSummaryComponent,
+    SeminarsComponent,
+    CoursesComponent
     
   ],
   imports: [
